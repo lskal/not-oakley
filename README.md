@@ -24,7 +24,7 @@
 
 `<Icon icon="mdi-light:home" />`
 
-## [icons list](https://icon-sets.iconify.design/)
+find the perfect icon by checking out the [iconify catalog page](https://icon-sets.iconify.design/)
 
 ---
 
