@@ -6,6 +6,8 @@
 
 - [nuxt 4 exemples](http://nuxt.com/docs/4.x/examples)
 
+- [nuxt 4 modules](https://nuxt.com/modules)
+
 ---
 
 ## USEFULL CLI LINES:
