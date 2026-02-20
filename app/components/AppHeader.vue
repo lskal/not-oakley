@@ -96,6 +96,13 @@ import IconHeader from "./IconHeader.vue";
         background: transparent;
         cursor: pointer;
 
+        &:hover,
+        &:focus,
+        &:active {
+          background: gray;
+          border-radius: 5px;
+        }
+
         .logoWebsite {
           height: 30px;
           width: auto;

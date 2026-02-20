@@ -1,6 +1,6 @@
 {
-  "name": "not-oakley-nuxt-ecommerce",
-  "short_name": "oakley-nuxt",
+  "name": "nuxt-training-ecommerce-project",
+  "short_name": "nuxt-training-ecommerce-project",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
