@@ -7,7 +7,7 @@
 
 <style scoped lang="scss">
 .bodyWrapper {
-  margin-left: var(--page-gutter);
-  margin-right: var(--page-gutter);
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
 }
 </style>

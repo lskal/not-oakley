@@ -48,11 +48,10 @@ body {
   user-select: auto;
   cursor: auto;
 
-  /* Optional: better default scrolling on iOS */
+  /* better default scrolling on iOS */
   -webkit-overflow-scrolling: touch;
 }
 
-/* 2) Optional: remove default margins for common text elements */
 h1,
 h2,
 h3,
@@ -63,7 +62,6 @@ p {
   margin: 0;
 }
 
-/* 3) Optional: images behave nicely by default */
 img,
 svg,
 video,
@@ -94,7 +92,7 @@ canvas {
   --line-height-base: 1.625;
   --letter-spacing-base: 0.5px;
 
-  --font-size-base: 16px;
+  --font-size-base: 16px; //16px === 1rem
   --font-size: 14px;
 
   /* ===== Mobile first SCALE TOKENS (xs === <576px) ===== */
