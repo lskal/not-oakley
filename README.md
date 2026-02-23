@@ -1,6 +1,6 @@
 # NUXT-TRAINING-ECOMMERCE-PROJECT
 
-## This is a training project to inprove in Nuxt 4 (current) and Vue 3 (current). Is not ment to be a rep off of the Oakley website, is just using is as a base to learn, please don't sue me ✌️
+## This is a training project to improve my skills in Nuxt 4 (current) and Vue 3 (current). Is not ment to be a rep off of the Oakley website, is just using is as a base to learn, please don't sue me ✌️
 
 ## LINKS:
 
