@@ -10,20 +10,15 @@
       aria-label="Main content"
     >
       <slot />
-      <AppFooter />
     </main>
+    <AppFooter />
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .main-content {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.main-content:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 </style>

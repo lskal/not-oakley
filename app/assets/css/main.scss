@@ -95,11 +95,12 @@ canvas {
   --font-size-base: 16px; //16px === 1rem
   --font-size: 14px;
 
+  --radius: 100px;
+
   /* ===== Mobile first SCALE TOKENS (xs === <576px) ===== */
   --spacing: 8px;
   --page-gutter: 8px;
 
-  --radius: 4px;
   --shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
   /* sm ≥576px */
@@ -111,7 +112,6 @@ canvas {
   @media (min-width: 768px) {
     --spacing: 16px;
     --page-gutter: 16px;
-    --radius: 8px;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
 
@@ -120,7 +120,6 @@ canvas {
     --font-size: 18px;
     --spacing: 24px;
     --page-gutter: 24px;
-    --radius: 16px;
     --shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
   }
 

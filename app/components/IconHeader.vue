@@ -9,8 +9,7 @@ const props = defineProps<{
   iconActive: string;
   link?: string;
   preventClick?: boolean;
-  heightIcon?: number;
-  active?: boolean; //probably not gonna be use becouse i can read the url path and find if active
+  heightIcon?: number | string;
   label?: string;
 }>();
 
@@ -38,6 +37,17 @@ const preventClickAlert = (e: MouseEvent) => {
     alert("This page/link/element does not exist yet.");
   }
 };
+
+// makes sure heightIcon is formatted as number
+const heightIconFormatted = computed(() => {
+  if (props.heightIcon && typeof props.heightIcon === "string") {
+    return parseInt(props.heightIcon);
+  } else if (props.heightIcon && typeof props.heightIcon === "number") {
+    return props.heightIcon;
+  } else {
+    return 30 as number;
+  }
+});
 </script>
 
 <template>
@@ -51,7 +61,11 @@ const preventClickAlert = (e: MouseEvent) => {
     @focus="isHover = true"
     @blur="isHover = false"
   >
-    <Icon :icon="currentIcon" :height="heightIcon || 30" />
+    <Icon
+      v-if="currentIcon"
+      :icon="currentIcon"
+      :height="heightIconFormatted"
+    />
   </NuxtLink>
 
   <button
@@ -65,7 +79,11 @@ const preventClickAlert = (e: MouseEvent) => {
     @focus="isHover = true"
     @blur="isHover = false"
   >
-    <Icon :icon="currentIcon" :height="heightIcon || 30" />
+    <Icon
+      v-if="currentIcon"
+      :icon="currentIcon"
+      :height="heightIconFormatted"
+    />
   </button>
 </template>
 
