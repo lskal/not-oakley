@@ -80,3 +80,21 @@ export type TProduct = {
   specs?: TProductSpecs;
   createdAt?: string;
 };
+
+export type TBannerImage = {
+  id: number;
+  backGroundImage?: string;
+  preTitle?: string;
+  title?: string;
+  subtitle?: string;
+  ctaBannerValues?: TCtaBanner[];
+  layoutBanner?: "left" | "center" | "right";
+};
+
+export type TCtaBanner = {
+  id: number;
+  ctaValue?: string;
+  ctaLink?: string;
+};
+
+export type TBannerContainer = TBannerImage[];

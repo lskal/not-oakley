@@ -2,6 +2,7 @@
 import IconHeader from "./IconHeader.vue";
 import { useIsActivePath } from "~/composables/useIsActivePath";
 const { isActivePath } = useIsActivePath();
+const isDesktop = useBreakpoint({ minWidth: 1200 });
 </script>
 
 <template>
@@ -20,6 +21,7 @@ const { isActivePath } = useIsActivePath();
           iconActive="solar:hamburger-menu-bold-duotone"
           label="menu"
           preventClick
+          v-if="isDesktop"
         />
 
         <NuxtLink
@@ -28,6 +30,7 @@ const { isActivePath } = useIsActivePath();
             activePage: isActivePath('/category/sunglasses'),
           }"
           to="/category/sunglasses"
+          v-if="isDesktop"
           >Sunglasses</NuxtLink
         >
         <NuxtLink
@@ -36,6 +39,7 @@ const { isActivePath } = useIsActivePath();
             activePage: isActivePath('/category/prescription'),
           }"
           to="/category/prescription"
+          v-if="isDesktop"
           >Prescription</NuxtLink
         >
         <NuxtLink
@@ -44,6 +48,7 @@ const { isActivePath } = useIsActivePath();
             activePage: isActivePath('/category/apparel'),
           }"
           to="/category/apparel"
+          v-if="isDesktop"
           >Apparel</NuxtLink
         >
       </div>
@@ -94,7 +99,6 @@ const { isActivePath } = useIsActivePath();
 
 <style scoped lang="scss">
 .headerContainer {
-  margin-bottom: 50px;
   width: 100%;
 
   // subcontent
@@ -103,7 +107,7 @@ const { isActivePath } = useIsActivePath();
     background-color: var(--color-accent);
   }
 
-  // main header component
+  // main header
   .headerMain {
     width: 100%;
     display: flex;
