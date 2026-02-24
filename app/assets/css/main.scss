@@ -70,6 +70,19 @@ canvas {
   max-width: 100%;
 }
 
+page-enter-active,
+.page-leave-active {
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
 :root {
   /* ===== COLORS ===== */
   --color-text-primary: #222222;
