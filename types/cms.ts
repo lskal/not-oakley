@@ -1,3 +1,4 @@
+/* database types */
 export type TCategory =
   | "sunglasses"
   | "prescription"
@@ -80,7 +81,17 @@ export type TProduct = {
   specs?: TProductSpecs;
   createdAt?: string;
 };
+/* database types */
 
+/* /composables/useFormatNumber.ts */
+export type TNumberLike = number | `${number}`;
+/* /composables/useFormatNumber.ts */
+
+/* /composables/useFormatCssSize.ts */
+export type TCssSize = number | string;
+/* /composables/useFormatCssSize.ts */
+
+/* /components/homepage/HomePageBanner.vue */
 export type TBannerImage = {
   id: number;
   backGroundImage?: string;
@@ -98,3 +109,4 @@ export type TCtaBanner = {
 };
 
 export type TBannerContainer = TBannerImage[];
+/* /components/homepage/HomePageBanner.vue */

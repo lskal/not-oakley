@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
 import { Icon } from "@iconify/vue";
 import { useIsActivePath } from "~/composables/useIsActivePath";
+import type { TNumberLike } from "../../../types/cms";
 
 const props = defineProps<{
   icon: string;
@@ -9,7 +9,7 @@ const props = defineProps<{
   iconActive: string;
   link?: string;
   preventClick?: boolean;
-  heightIcon?: number | string;
+  heightIcon?: TNumberLike;
   label?: string;
 }>();
 
@@ -39,15 +39,7 @@ const preventClickAlert = (e: MouseEvent) => {
 };
 
 // makes sure heightIcon is formatted as number
-const heightIconFormatted = computed(() => {
-  if (props.heightIcon && typeof props.heightIcon === "string") {
-    return parseInt(props.heightIcon);
-  } else if (props.heightIcon && typeof props.heightIcon === "number") {
-    return props.heightIcon;
-  } else {
-    return 30 as number;
-  }
-});
+const heightIconFormatted = useFormatNumber(props.heightIcon);
 </script>
 
 <template>

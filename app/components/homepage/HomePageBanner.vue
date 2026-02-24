@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { TBannerContainer } from "../../../types/cms";
+import CustomCta from "../buttons/CustomCta.vue";
 
 const props = defineProps<{
   bannerObject?: TBannerContainer;
@@ -39,18 +40,17 @@ const layoutBanner = computed(() => {
         </div>
 
         <div v-if="banner.ctaBannerValues?.length" class="ctaList">
-          <div
-            v-for="cta in banner.ctaBannerValues"
-            :key="cta.id"
-            class="ctaWrapper"
-          >
-            <NuxtLink
-              class="bannerCta"
-              aria-label="cta"
-              :to="cta.ctaLink || '/'"
-            >
-              <p>{{ cta.ctaValue }}</p>
-            </NuxtLink>
+          <div v-for="cta in banner.ctaBannerValues" :key="cta.id">
+            <CustomCta
+              :textValue="cta.ctaValue ?? ''"
+              :link="cta.ctaLink ?? ''"
+              backgroundColor="var(--color-accent)"
+              hoverBackgroundColor="tomato"
+              hoverTextColor="var(--color-text-primary)"
+              hoverBorderColor="var(--color-text-primary)"
+              borderWidth="5px"
+              borderStyle="solid"
+            />
           </div>
         </div>
       </div>
@@ -141,20 +141,6 @@ const layoutBanner = computed(() => {
         display: flex;
         flex-direction: column;
         gap: 12px;
-
-        .ctaWrapper {
-          display: flex;
-
-          .bannerCta {
-            background-color: var(--color-accent);
-            color: white;
-            padding: 16px 32px;
-            text-decoration: none;
-            cursor: pointer;
-            border-radius: var(--radius);
-            white-space: nowrap;
-          }
-        }
       }
     }
   }

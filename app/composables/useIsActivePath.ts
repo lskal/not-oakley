@@ -1,5 +1,3 @@
-import { useRoute } from "#imports";
-
 export const useIsActivePath = () => {
   const route = useRoute();
 

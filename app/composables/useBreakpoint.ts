@@ -1,12 +1,9 @@
-// ~/composables/useBreakpoint.ts
-import { ref, onMounted, onBeforeUnmount, computed } from "vue";
-
-type Options = {
+type TOptions = {
   minWidth?: number;
   maxWidth?: number; // default used only when minWidth is NOT set
 };
 
-export function useBreakpoint(options: Options = {}) {
+export function useBreakpoint(options: TOptions = {}) {
   const minWidth = options.minWidth;
 
   const maxWidth =
