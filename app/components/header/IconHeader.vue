@@ -13,7 +13,7 @@ const props = defineProps<{
   label?: string;
 }>();
 
-// actove path logic
+// active path logic
 const { isActivePath } = useIsActivePath();
 
 const isRouteActive = computed(() => {

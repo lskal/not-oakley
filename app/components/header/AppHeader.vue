@@ -104,7 +104,7 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
   // subcontent
   .subcontent {
     text-align: center;
-    background-color: var(--color-accent);
+    background-color: var(--color-background-secondary);
   }
 
   // main header

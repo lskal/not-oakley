@@ -75,9 +75,17 @@ canvas {
   --color-text-primary: #222222;
   --color-text-secondary: #555555;
   --color-background-primary: #ffffff;
+  --color-background-secondary: #eeeeee;
   --color-background-dark: #1f1f24;
   --color-border: #e5e5e5;
   --color-accent: #e88a24;
+
+  /* https://www.color-hex.com/color-palette/58143 */
+  --color-dark-red: #981313;
+  --color-dark-brown: #745527;
+  --color-light-brown: #ceb083;
+  --color-light-blue: #69c2c9;
+  --color-light-green: #8ce55f;
 
   /* ===== TRANSITIONS ===== */
   --transition-fast: 150ms ease;
