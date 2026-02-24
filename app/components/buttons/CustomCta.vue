@@ -10,6 +10,7 @@ const props = withDefaults(
     // base  props
     disabled?: boolean;
     ariaLabel?: string;
+    isUppercase?: boolean;
 
     // base colors
     borderColor?: string;
@@ -34,13 +35,14 @@ const props = withDefaults(
   }>(),
   {
     disabled: false,
+    isUppercase: false,
 
     borderColor: "transparent",
     backgroundColor: "var(--color-background-dark)",
     textColor: "var(--color-text-white)",
 
     margin: 0,
-    padding: "12px 16px",
+    padding: "0 24px",
     borderRadius: "var(--radius)",
     borderWidth: "1px",
     borderStyle: "solid",
@@ -69,6 +71,9 @@ const formattedTextColor = computed(() => {
 });
 
 const formattedAriaLabel = computed(() => props.ariaLabel ?? props.textValue);
+const formattedTextValue = computed(() =>
+  props.isUppercase ? props.textValue.toUpperCase() : props.textValue,
+);
 
 const formattedMargin = useFormatCssSize(props.margin);
 const formattedPadding = useFormatCssSize(props.padding);
@@ -97,7 +102,7 @@ const formattedBorderWidth = useFormatCssSize(props.borderWidth);
     @focus="!disabled && (isHover = true)"
     @blur="isHover = false"
   >
-    {{ textValue }}
+    {{ formattedTextValue }}
   </NuxtLink>
 </template>
 
@@ -107,6 +112,10 @@ const formattedBorderWidth = useFormatCssSize(props.borderWidth);
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+
+  font-size: 14px;
+  font-weight: 700;
+  height: 56px;
 
   cursor: pointer;
   text-decoration: none;

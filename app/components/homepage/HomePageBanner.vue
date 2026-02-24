@@ -50,6 +50,7 @@ const layoutBanner = computed(() => {
               hoverBorderColor="var(--color-text-primary)"
               borderWidth="5px"
               borderStyle="solid"
+              isUppercase
             />
           </div>
         </div>
