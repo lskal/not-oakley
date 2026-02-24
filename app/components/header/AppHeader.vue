@@ -1,5 +1,5 @@
 <script setup>
-import IconHeader from "./IconHeader.vue";
+import IconHeader from "../buttons/IconHeader.vue";
 import { useIsActivePath } from "~/composables/useIsActivePath";
 const { isActivePath } = useIsActivePath();
 const isDesktop = useBreakpoint({ minWidth: 1200 });

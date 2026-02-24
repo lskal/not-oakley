@@ -3,6 +3,8 @@ const props = defineProps<{
   // required
   textValue: string;
   link?: string;
+  disabled?: boolean;
+  ariaLabel?: string;
 
   borderColor: string;
   backgroundColor: string;
