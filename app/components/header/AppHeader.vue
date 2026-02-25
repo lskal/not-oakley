@@ -1,5 +1,5 @@
 <script setup>
-import IconHeader from "../buttons/IconHeader.vue";
+import CustomIcon from "../buttons/CustomIcon.vue";
 import { useIsActivePath } from "~/composables/useIsActivePath";
 const { isActivePath } = useIsActivePath();
 const isDesktop = useBreakpoint({ minWidth: 1200 });
@@ -14,12 +14,13 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
           <NuxtImg class="logoWebsite" src="/logo.svg" alt="logo" />
         </NuxtLink>
 
-        <IconHeader
+        <CustomIcon
           heightIcon="30"
           icon="solar:hamburger-menu-outline"
           iconHover="solar:hamburger-menu-bold-duotone"
           iconActive="solar:hamburger-menu-bold-duotone"
           label="menu"
+          link="#"
           preventClick
           v-if="isDesktop"
         />
@@ -54,7 +55,7 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
       </div>
 
       <div class="right">
-        <IconHeader
+        <CustomIcon
           heightIcon="30"
           icon="solar:map-point-favourite-broken"
           iconHover="solar:map-point-favourite-bold-duotone"
@@ -63,7 +64,7 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
           label="favourites"
         />
 
-        <IconHeader
+        <CustomIcon
           heightIcon="30"
           icon="solar:map-point-search-broken"
           iconHover="solar:map-point-search-bold-duotone"
@@ -73,7 +74,7 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
           preventClick
         />
 
-        <IconHeader
+        <CustomIcon
           heightIcon="30"
           icon="solar:user-broken"
           iconHover="solar:user-bold-duotone"
@@ -83,7 +84,7 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
           preventClick
         />
 
-        <IconHeader
+        <CustomIcon
           heightIcon="30"
           icon="solar:cart-5-broken"
           iconHover="solar:cart-5-bold-duotone"
