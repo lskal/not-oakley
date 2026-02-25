@@ -11,7 +11,7 @@ import CustomIcon from "../buttons/CustomIcon.vue";
         icon="entypo-social:facebook-with-circle"
         link="#"
         label="icon"
-        bgColor="tomato"
+        bgColor="darkblue"
         iconColor="white"
       />
       <CustomIcon
@@ -19,7 +19,7 @@ import CustomIcon from "../buttons/CustomIcon.vue";
         icon="entypo-social:instagram-with-circle"
         link="#"
         label="icon"
-        bgColor="black"
+        bgColor="darkorange"
         iconColor="white"
       />
       <CustomIcon

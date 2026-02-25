@@ -34,7 +34,7 @@ find the perfect icon by checking out the [iconify catalog page](https://icon-se
 
 ## SCSS
 
-[documentation scss](https://nuxt.com/docs/4.x/getting-started/styling#using-preprocessors)
+[nuxt 4 scss docs](https://nuxt.com/docs/4.x/getting-started/styling#using-preprocessors)
 
 ---
 
