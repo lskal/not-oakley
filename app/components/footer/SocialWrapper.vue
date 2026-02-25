@@ -11,6 +11,8 @@ import CustomIcon from "../buttons/CustomIcon.vue";
         icon="entypo-social:facebook-with-circle"
         link="#"
         label="icon"
+        bgColor="tomato"
+        iconColor="white"
       />
       <CustomIcon
         heightIcon="40"
@@ -25,18 +27,24 @@ import CustomIcon from "../buttons/CustomIcon.vue";
         icon="entypo-social:twitter-with-circle"
         link="#"
         label="icon"
+        bgColor="dodgerblue"
+        iconColor="white"
       />
       <CustomIcon
         heightIcon="40"
         icon="entypo-social:youtube-with-circle"
         link="#"
         label="icon"
+        bgColor="red"
+        iconColor="white"
       />
       <CustomIcon
         heightIcon="40"
         icon="entypo-social:500px-with-circle"
         link="#"
         label="icon"
+        bgColor="green"
+        iconColor="white"
       />
     </div>
   </div>

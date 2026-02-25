@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import ContactUsWrapper from "./ContactUsWrapper.vue";
+import CopyrightRow from "./CopyrightRow.vue";
+import LegalLinksRow from "./LegalLinksRow.vue";
+import LinksWrapper from "./LinksWrapper.vue";
 import NewsletterWrapper from "./NewsletterWrapper.vue";
 import SocialWrapper from "./SocialWrapper.vue";
 </script>
@@ -13,19 +16,16 @@ import SocialWrapper from "./SocialWrapper.vue";
       </div>
       <div class="footerLinksRow">
         <ContactUsWrapper />
+        <LinksWrapper />
       </div>
-      <div class="footerCountry">footerCountry</div>
-      <div class="legalLinksRow">legalLinksRow</div>
-      <div class="copyrightRow">copyrightRow</div>
+      <div class="footerCountry"><FooterCountry /></div>
+      <div class="legalLinksRow"><LegalLinksRow /></div>
+      <div class="copyrightRow"><CopyrightRow /></div>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-* {
-  border: 1px solid tomato;
-}
-
 .footerContainer {
   padding-left: var(--page-gutter);
   padding-right: var(--page-gutter);
