@@ -1,6 +1,6 @@
 <template>
   <div class="wishlistCaroselWrapper">
-    <div>POPULAR ITEMS FOR YOU</div>
+    <slot></slot>
     <div class="carosel">
       <div class="caroselItem">
         <NuxtImg src="https://picsum.photos/1001" alt="image" />

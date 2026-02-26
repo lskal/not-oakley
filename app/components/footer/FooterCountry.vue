@@ -4,8 +4,8 @@
       <p>Country seletor</p>
     </div>
     <div class="bannerContent">
-      <div>logo 1</div>
-      <div>logo 2</div>
+      <RandomImage topic="logo" height="56" width="138" alt="logo" />
+      <RandomImage topic="logo" height="56" width="360" alt="logo" />
     </div>
   </div>
 </template>

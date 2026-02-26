@@ -11,7 +11,9 @@
       <NuxtLink to="/category/eyeglasses">View New Eyeglasses</NuxtLink>
       <NuxtLink to="/category/clothing">View New Clothing </NuxtLink>
     </div>
-    <div class="wishlistCarousel"><WishlistCarosel /></div>
+    <div class="wishlistCarousel">
+      <WishlistCarosel>POPULAR ITEMS FOR YOU</WishlistCarosel>>
+    </div>
   </div>
 </template>
 
