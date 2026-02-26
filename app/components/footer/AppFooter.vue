@@ -14,12 +14,16 @@ import SocialWrapper from "./SocialWrapper.vue";
         <NewsletterWrapper />
         <SocialWrapper />
       </div>
+      <hr />
       <div class="footerLinksRow">
         <ContactUsWrapper />
         <LinksWrapper />
       </div>
+      <hr />
       <div class="footerCountry"><FooterCountry /></div>
+      <hr />
       <div class="legalLinksRow"><LegalLinksRow /></div>
+      <hr />
       <div class="copyrightRow"><CopyrightRow /></div>
     </div>
   </div>
@@ -30,6 +34,10 @@ import SocialWrapper from "./SocialWrapper.vue";
   padding-left: var(--page-gutter);
   padding-right: var(--page-gutter);
   background-color: var(--color-background-secondary);
+
+  &:deep(li) {
+    list-style-type: none;
+  }
 
   .footerWrapper {
     .footerNews,
