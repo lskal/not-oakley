@@ -107,6 +107,8 @@ const layoutBanner = computed(() => {
       justify-content: center;
       flex-wrap: wrap;
 
+      color: var(--color-text-white);
+
       &.pos-left {
         left: var(--page-gutter);
         transform: none;

@@ -8,7 +8,7 @@ import CustomCta from "../buttons/CustomCta.vue";
       <b> Join our community and stay up to date: </b>
     </p>
     <div class="inputEmailWrapper">
-      <input type="email" placeholder="Enter your email" />
+      <input class="inputEmail" type="email" placeholder="Enter your email" />
       <CustomCta
         textValue="Sign Up"
         :isUppercase="true"
@@ -29,6 +29,11 @@ import CustomCta from "../buttons/CustomCta.vue";
   .inputEmailWrapper {
     display: flex;
     gap: 20px;
+
+    .inputEmail {
+      width: calc(((100vw - 80px) / 3.7) - 2px);
+      max-width: 360px;
+    }
   }
 }
 </style>

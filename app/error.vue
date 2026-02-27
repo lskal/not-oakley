@@ -17,7 +17,11 @@ const props = defineProps<{ error: NuxtError }>();
         textValue="Return to the home page →"
         link="/"
         isUppercase
-        margin="40px 0 0 "
+        margin="40px 0 0"
+        backgroundColor="white"
+        textColor="black"
+        borderColor="black"
+        borderWidth="2px"
       />
     </div>
   </div>
