@@ -12,6 +12,7 @@ import CustomIcon from "../buttons/CustomIcon.vue";
           link="#"
           heightIcon="40"
           bgColor="lightgray"
+          paddingIcon="10"
         />
         FAQ's
       </li>
@@ -21,6 +22,7 @@ import CustomIcon from "../buttons/CustomIcon.vue";
           link="#"
           heightIcon="40"
           bgColor="lightgray"
+          paddingIcon="10"
         />
         Chat with us
       </li>
@@ -30,6 +32,7 @@ import CustomIcon from "../buttons/CustomIcon.vue";
           link="#"
           heightIcon="40"
           bgColor="lightgray"
+          paddingIcon="10"
         />
         Email us
       </li>
@@ -39,6 +42,7 @@ import CustomIcon from "../buttons/CustomIcon.vue";
           link="#"
           heightIcon="40"
           bgColor="lightgray"
+          paddingIcon="10"
         />
         Order status
       </li>
@@ -48,6 +52,7 @@ import CustomIcon from "../buttons/CustomIcon.vue";
           link="#"
           heightIcon="40"
           bgColor="lightgray"
+          paddingIcon="10"
         />
         Shipping & returns policy
       </li>

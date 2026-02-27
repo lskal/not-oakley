@@ -4,7 +4,9 @@ import CustomCta from "../buttons/CustomCta.vue";
 
 <template>
   <div class="newsletterWrapper">
-    <p class="newsletterCall">Join our community and stay up to date:</p>
+    <p class="newsletterCall">
+      <b> Join our community and stay up to date: </b>
+    </p>
     <div class="inputEmailWrapper">
       <input type="email" placeholder="Enter your email" />
       <CustomCta

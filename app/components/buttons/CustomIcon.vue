@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
 import { useIsActivePath } from "~/composables/useIsActivePath";
-import type { TNumberLike } from "../../../types/cms";
+import type { TCssSize, TNumberLike } from "../../../types/cms";
 
 const props = defineProps<{
   // required
@@ -18,6 +18,7 @@ const props = defineProps<{
   // optional styling
   iconColor?: string;
   bgColor?: string;
+  paddingIcon?: TCssSize;
 }>();
 
 const { isActivePath } = useIsActivePath();
@@ -39,16 +40,24 @@ const preventClickAlert = (e: MouseEvent) => {
 
 const heightIconFormatted = useFormatNumber(props.heightIcon, 30);
 
-const iconColor = computed(() =>
-  props.iconColor ? { color: props.iconColor } : undefined,
-);
+const paddingIconFormatted = useFormatCssSize(() => props.paddingIcon);
 
 const wrapperComputedStyle = computed(() => {
   if (!props.bgColor) return undefined;
+
   return {
     background: props.bgColor,
     width: `${heightIconFormatted.value}px`,
     height: `${heightIconFormatted.value}px`,
+    "--paddingIcon": paddingIconFormatted.value,
+    boxSizing: "border-box",
+  } as const;
+});
+
+const iconComputedStyle = computed(() => {
+  return {
+    ...(props.iconColor ? { color: props.iconColor } : {}),
+    "--paddingIcon": paddingIconFormatted.value,
   } as const;
 });
 </script>
@@ -68,7 +77,7 @@ const wrapperComputedStyle = computed(() => {
       <Icon
         :icon="currentIcon"
         :height="heightIconFormatted"
-        :style="iconColor"
+        :style="iconComputedStyle"
       />
     </span>
 
@@ -76,7 +85,7 @@ const wrapperComputedStyle = computed(() => {
       v-else
       :icon="currentIcon"
       :height="heightIconFormatted"
-      :style="iconColor"
+      :style="iconComputedStyle"
     />
   </NuxtLink>
 
@@ -95,7 +104,7 @@ const wrapperComputedStyle = computed(() => {
       <Icon
         :icon="currentIcon"
         :height="heightIconFormatted"
-        :style="iconColor"
+        :style="iconComputedStyle"
       />
     </span>
 
@@ -103,7 +112,7 @@ const wrapperComputedStyle = computed(() => {
       v-else
       :icon="currentIcon"
       :height="heightIconFormatted"
-      :style="iconColor"
+      :style="iconComputedStyle"
     />
   </button>
 </template>
@@ -128,5 +137,9 @@ const wrapperComputedStyle = computed(() => {
   overflow: hidden;
   border-radius: 50%;
   line-height: 0;
+
+  > svg {
+    padding: var(--paddingIcon, 0);
+  }
 }
 </style>

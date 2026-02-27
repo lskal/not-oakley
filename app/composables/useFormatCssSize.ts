@@ -1,7 +1,12 @@
+import { computed, toValue, type MaybeRefOrGetter } from "vue";
 import type { TCssSize } from "../../types/cms";
 
-export function useFormatCssSize(value: TCssSize | undefined) {
+export function useFormatCssSize(
+  passedValue: MaybeRefOrGetter<TCssSize | undefined>,
+) {
   return computed(() => {
+    const value = toValue(passedValue);
+
     // if falsy return undefined
     if (value === undefined || value === null || value === "") {
       return undefined;

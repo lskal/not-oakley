@@ -61,6 +61,12 @@
 
   .column {
     width: 33.33%;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 }
 </style>

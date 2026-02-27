@@ -14,16 +14,16 @@ import SocialWrapper from "./SocialWrapper.vue";
         <NewsletterWrapper />
         <SocialWrapper />
       </div>
-      <hr />
+      <hr style="margin: 32px 0" />
       <div class="footerLinksRow">
         <ContactUsWrapper />
         <LinksWrapper />
       </div>
-      <hr />
+      <hr style="margin: 32px 0" />
       <div class="footerCountry"><FooterCountry /></div>
-      <hr />
+      <hr style="margin: 32px 0" />
       <div class="legalLinksRow"><LegalLinksRow /></div>
-      <hr />
+
       <div class="copyrightRow"><CopyrightRow /></div>
     </div>
   </div>
@@ -31,8 +31,7 @@ import SocialWrapper from "./SocialWrapper.vue";
 
 <style scoped lang="scss">
 .footerContainer {
-  padding-left: var(--page-gutter);
-  padding-right: var(--page-gutter);
+  padding: 32px var(--page-gutter);
   background-color: var(--color-background-secondary);
 
   &:deep(li) {
@@ -44,7 +43,12 @@ import SocialWrapper from "./SocialWrapper.vue";
     .footerLinksRow {
       display: flex;
       justify-content: space-between;
+      font-size: small;
     }
+  }
+
+  .copyrightRow {
+    padding: 50px 0 30px;
   }
 }
 </style>

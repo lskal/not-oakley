@@ -4,7 +4,7 @@ import CustomIcon from "../buttons/CustomIcon.vue";
 
 <template>
   <div class="socialWrapper">
-    <p>Follow us:</p>
+    <p><b>Follow us:</b></p>
     <div class="socialIconsWrapper">
       <CustomIcon
         heightIcon="40"

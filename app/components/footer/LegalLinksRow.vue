@@ -21,5 +21,6 @@
   gap: 24px 2%;
   flex-wrap: wrap;
   word-wrap: none;
+  font-size: small;
 }
 </style>
