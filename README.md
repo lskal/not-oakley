@@ -14,11 +14,29 @@
 
 ## USEFULL CLI LINES:
 
-## deleta and full install
+## delete and full install
 
 `rm -rf node_modules .nuxt .output .nitro .data .cache dist logs`
 `npm i`
 `npm run dev`
+
+## vercel dev
+
+### You use vercel dev only when:
+
+- Testing environment variable injection
+
+- Testing serverless behavior
+
+- Debugging something that behaves differently on Vercel
+
+For everyday development:
+
+`npm run dev`
+
+For production-like testing:
+
+`vercel dev`
 
 ---
 
@@ -42,7 +60,7 @@ find the perfect icon by checking out the [iconify catalog page](https://icon-se
 
 - i18n
 - sitemap
-- supabase
+- supabase --> for now there is no cart or account pages, if i decide in future to add this feature gonna have to inclire supabase with roles, admin and this staff
 - pinia
 - tailwind
 - content
@@ -56,7 +74,7 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 
 ---
 
-## SETUP NPM:
+## SETUP NPM/PNPM:
 
 Make sure to install dependencies:
 
@@ -75,6 +93,12 @@ Build the application for production:
 ### npm run build
 
 `npm run build`
+
+Updata values in vercel blob:
+
+### npm run blob:upload
+
+`npm run blob:upload`
 
 Locally preview production build:
 

@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "blob:upload": "vercel blob put ./initialDB.json --pathname data/initialDB.json --content-type application/json --access private --allow-overwrite"
   },
   "dependencies": {
     "@nuxt/image": "^2.0.0",
