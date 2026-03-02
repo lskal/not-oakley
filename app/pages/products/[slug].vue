@@ -2,6 +2,17 @@
 const route = useRoute();
 const slug = computed(() => String(route.params.slug));
 
+/* 
+fetch
+const route = useRoute();
+const slug = computed(() => String(route.params.slug));
+
+const { data: product } = await useFetch(
+  () => `/api/products/${slug.value}`
+);
+
+*/
+
 // TODO: set a value in CMS with productLayout
 const productLayout = ref<"hero-square" | "hero-16x9" | "hero-4x5">(
   "hero-16x9",

@@ -1,0 +1,1421 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "slug": "encoder",
+      "name": "Encoder",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Sport performance shield designed with hat and helmet fit functionality in mind.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9471",
+      "heroImage": "https://placehold.co/900x600?text=Encoder",
+      "minPrice": 215,
+      "maxPrice": 215,
+      "variants": [
+        {
+          "id": "OO9471-0336",
+          "sku": "OO9471-0336",
+          "name": "Matte Black / Prizm Black",
+          "price": 215,
+          "currency": "USD",
+          "inStock": true,
+          "frameColor": "Matte Black",
+          "lensColor": "Prizm Black",
+          "lensTechnology": "PRIZM",
+          "size": "L (135mm)",
+          "fit": "regular",
+          "images": ["https://placehold.co/900x600?text=Encoder+OO9471-0336"]
+        }
+      ],
+      "specs": {
+        "hasPrescription": true,
+        "tags": ["sport", "shield", "helmet-fit"]
+      }
+    },
+    {
+      "id": 2,
+      "slug": "encoder-strike",
+      "name": "Encoder Strike",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "High-coverage sport style with Prizm lens options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9235",
+      "heroImage": "https://placehold.co/900x600?text=Encoder+Strike",
+      "minPrice": 293,
+      "variants": [
+        {
+          "id": "OO9235-PRIZM-ROAD",
+          "name": "Matte Black / Prizm Road",
+          "price": 293,
+          "currency": "USD",
+          "inStock": true,
+          "frameColor": "Matte Black",
+          "lensColor": "Prizm Road",
+          "lensTechnology": "PRIZM",
+          "images": [
+            "https://placehold.co/900x600?text=Encoder+Strike+Prizm+Road"
+          ]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["sport", "cycling"] }
+    },
+    {
+      "id": 3,
+      "slug": "sutro-lite",
+      "name": "Sutro Lite",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Semi-rimless shield design with wide field of view; sport/lifestyle crossover.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9463",
+      "heroImage": "https://placehold.co/900x600?text=Sutro+Lite",
+      "minPrice": 184,
+      "variants": [
+        {
+          "id": "0OO9463-PRIZM-BLACK",
+          "name": "Matte Black / Prizm Black",
+          "price": 184,
+          "currency": "USD",
+          "inStock": true,
+          "frameColor": "Matte Black",
+          "lensColor": "Prizm Black",
+          "lensTechnology": "PRIZM",
+          "images": ["https://placehold.co/900x600?text=Sutro+Lite+Prizm+Black"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["shield", "urban-cycling"] }
+    },
+    {
+      "id": 4,
+      "slug": "sutro-lite-low-bridge",
+      "name": "Sutro Lite (Low Bridge Fit)",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Low Bridge Fit version of Sutro Lite with multiple Prizm options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9463A",
+      "heroImage": "https://placehold.co/900x600?text=Sutro+Lite+Low+Bridge",
+      "minPrice": 184,
+      "variants": [
+        {
+          "id": "0OO9463A-PRIZM-ROAD",
+          "name": "Matte Black / Prizm Road",
+          "price": 184,
+          "currency": "USD",
+          "inStock": true,
+          "fit": "low-bridge",
+          "images": [
+            "https://placehold.co/900x600?text=Sutro+Lite+Low+Bridge+Prizm+Road"
+          ]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["low-bridge-fit"] }
+    },
+    {
+      "id": 5,
+      "slug": "sutro-lite-sweep",
+      "name": "Sutro Lite Sweep",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Sweep lens shape paired with Sutro frame DNA; optimized coverage and airflow on select lenses.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9465",
+      "heroImage": "https://placehold.co/900x600?text=Sutro+Lite+Sweep",
+      "minPrice": 194,
+      "variants": [
+        {
+          "id": "0OO9465-PRIZM-24K",
+          "name": "Matte Carbon / Prizm 24K",
+          "price": 194,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "size": "M (133mm)",
+          "images": [
+            "https://placehold.co/900x600?text=Sutro+Lite+Sweep+Prizm+24K"
+          ]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["shield", "vented"] }
+    },
+    {
+      "id": 6,
+      "slug": "oakley-kato",
+      "name": "Oakley Kato",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Purpose-built performance design that conforms to the contours of the face with a disruptive wrap look.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9455M",
+      "heroImage": "https://placehold.co/900x600?text=Oakley+Kato",
+      "minPrice": 295,
+      "variants": [
+        {
+          "id": "0OO9455M-PRIZM-DARK-GOLF",
+          "name": "Polished Black / Prizm Dark Golf",
+          "price": 295,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "size": "M (132mm)",
+          "images": ["https://placehold.co/900x600?text=Kato+Prizm+Dark+Golf"]
+        }
+      ],
+      "specs": { "hasPrescription": false, "tags": ["performance", "wrap"] }
+    },
+    {
+      "id": 7,
+      "slug": "oakley-kato-x",
+      "name": "Oakley Kato X",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Disruptive design intended to fit close to the face; optimized coverage and adjustable rake.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9475",
+      "heroImage": "https://placehold.co/900x600?text=Oakley+Kato+X",
+      "minPrice": 305,
+      "variants": [
+        {
+          "id": "0OO9475-PRIZM-SAPPHIRE",
+          "name": "Polished Black / Prizm Sapphire",
+          "price": 305,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": ["https://placehold.co/900x600?text=Kato+X+Prizm+Sapphire"]
+        }
+      ],
+      "specs": { "hasPrescription": false, "tags": ["wrap", "adjustable-fit"] }
+    },
+    {
+      "id": 8,
+      "slug": "qntm-kato",
+      "name": "QNTM Kato",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "High-wrap performance eyewear with Prizm lens options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9481D",
+      "heroImage": "https://placehold.co/900x600?text=QNTM+Kato",
+      "minPrice": 348,
+      "variants": [
+        {
+          "id": "QNTM-KATO-TRANSPARENT-STONEWASH",
+          "name": "Transparent Stonewash / Prizm Sapphire",
+          "price": 348,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": [
+            "https://placehold.co/900x600?text=QNTM+Kato+Prizm+Sapphire"
+          ]
+        }
+      ],
+      "specs": { "hasPrescription": false, "tags": ["wrap", "premium"] }
+    },
+    {
+      "id": 9,
+      "slug": "frogskins",
+      "name": "Frogskins",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Classic lifestyle frame with modern lens options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9013",
+      "heroImage": "https://placehold.co/900x600?text=Frogskins",
+      "minPrice": 130,
+      "variants": [
+        {
+          "id": "0OO9013-GREY",
+          "name": "Polished Black / Grey",
+          "price": 130,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "STANDARD",
+          "images": ["https://placehold.co/900x600?text=Frogskins+Grey"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["lifestyle", "classic"] }
+    },
+    {
+      "id": 10,
+      "slug": "frogskins-low-bridge",
+      "name": "Frogskins (Low Bridge Fit)",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Low Bridge Fit version with multiple Prizm and Prizm Polarized options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9245",
+      "heroImage": "https://placehold.co/900x600?text=Frogskins+Low+Bridge",
+      "minPrice": 150,
+      "variants": [
+        {
+          "id": "0OO9245-PRIZM-BLACK-POLARIZED",
+          "name": "Matte Black / Prizm Black Polarized",
+          "price": 150,
+          "currency": "USD",
+          "inStock": true,
+          "fit": "low-bridge",
+          "lensTechnology": "PRIZM_POLARIZED",
+          "images": [
+            "https://placehold.co/900x600?text=Frogskins+Low+Bridge+Prizm+Black+Polarized"
+          ]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["low-bridge-fit"] }
+    },
+    {
+      "id": 11,
+      "slug": "frogskins-range-xl",
+      "name": "Frogskins Range XL",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Frogskins-inspired style with XL fit and Prizm options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9503",
+      "heroImage": "https://placehold.co/900x600?text=Frogskins+Range+XL",
+      "minPrice": 160,
+      "variants": [
+        {
+          "id": "0OO9503-PRIZM-RUBY",
+          "name": "Matte Grey Smoke/Grey Ink / Prizm Ruby",
+          "price": 160,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": [
+            "https://placehold.co/900x600?text=Frogskins+Range+XL+Prizm+Ruby"
+          ]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["lifestyle", "xl-fit"] }
+    },
+    {
+      "id": 12,
+      "slug": "encoder-verve-collection",
+      "name": "Encoder Verve Collection",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Limited edition Encoder colorway.",
+      "url": "https://www.oakley.com/en-us/product/W0OO9471VE",
+      "heroImage": "https://placehold.co/900x600?text=Encoder+Verve",
+      "minPrice": 132,
+      "variants": [
+        {
+          "id": "0OO9471VE-PRIZM-SAPPHIRE",
+          "name": "Verve Spacedust / Prizm Sapphire",
+          "price": 132,
+          "currency": "USD",
+          "inStock": false,
+          "lensTechnology": "PRIZM",
+          "images": [
+            "https://placehold.co/900x600?text=Encoder+Verve+Prizm+Sapphire"
+          ]
+        }
+      ],
+      "specs": { "hasPrescription": false, "tags": ["limited", "colorway"] }
+    },
+    {
+      "id": 13,
+      "slug": "holbrook",
+      "name": "Holbrook",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Iconic lifestyle silhouette inspired by screen heroes; built for everyday wear.",
+      "heroImage": "https://placehold.co/900x600?text=Holbrook",
+      "minPrice": 160,
+      "variants": [
+        {
+          "id": "HOLBROOK-PRIZM-GREY",
+          "name": "Matte Black / Prizm Grey",
+          "price": 160,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": ["https://placehold.co/900x600?text=Holbrook+Prizm+Grey"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["lifestyle"] }
+    },
+    {
+      "id": 14,
+      "slug": "sutro",
+      "name": "Sutro",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Bold shield design popular with cyclists; high coverage and Prizm options.",
+      "heroImage": "https://placehold.co/900x600?text=Sutro",
+      "minPrice": 185,
+      "variants": [
+        {
+          "id": "SUTRO-PRIZM-BLACK",
+          "name": "Polished Black / Prizm Black",
+          "price": 185,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": ["https://placehold.co/900x600?text=Sutro+Prizm+Black"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["shield", "cycling"] }
+    },
+    {
+      "id": 15,
+      "slug": "flak-2-0-xl",
+      "name": "Flak 2.0 XL",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Sport performance frame with extended lens coverage.",
+      "heroImage": "https://placehold.co/900x600?text=Flak+2.0+XL",
+      "minPrice": 200,
+      "variants": [
+        {
+          "id": "FLAK2-PRIZM-BLACK",
+          "name": "Matte Black / Prizm Black",
+          "price": 200,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": [
+            "https://placehold.co/900x600?text=Flak+2.0+XL+Prizm+Black"
+          ]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["sport"] }
+    },
+    {
+      "id": 16,
+      "slug": "jawbreaker",
+      "name": "Jawbreaker",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Cycling/race-oriented performance eyewear with high coverage.",
+      "heroImage": "https://placehold.co/900x600?text=Jawbreaker",
+      "minPrice": 230,
+      "variants": [
+        {
+          "id": "JAWBREAKER-PRIZM-ROAD",
+          "name": "White / Prizm Road",
+          "price": 230,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": ["https://placehold.co/900x600?text=Jawbreaker+Prizm+Road"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["cycling"] }
+    },
+    {
+      "id": 17,
+      "slug": "radar-ev-path",
+      "name": "Radar EV Path",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Sport shield with extended upper field of view.",
+      "heroImage": "https://placehold.co/900x600?text=Radar+EV+Path",
+      "minPrice": 220,
+      "variants": [
+        {
+          "id": "RADAR-EV-PRIZM",
+          "name": "Matte Black / Prizm",
+          "price": 220,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": ["https://placehold.co/900x600?text=Radar+EV+Path+Prizm"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["sport"] }
+    },
+    {
+      "id": 18,
+      "slug": "gascan",
+      "name": "Gascan",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Lifestyle frame with aggressive lines and strong coverage.",
+      "heroImage": "https://placehold.co/900x600?text=Gascan",
+      "minPrice": 150,
+      "variants": [
+        {
+          "id": "GASCAN-BLACK",
+          "name": "Black / Grey",
+          "price": 150,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "STANDARD",
+          "images": ["https://placehold.co/900x600?text=Gascan"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["lifestyle"] }
+    },
+    {
+      "id": 19,
+      "slug": "bxtr",
+      "name": "BXTR",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Modern lifestyle silhouette inspired by Oakley heritage.",
+      "heroImage": "https://placehold.co/900x600?text=BXTR",
+      "minPrice": 170,
+      "variants": [
+        {
+          "id": "BXTR-PRIZM",
+          "name": "Black / Prizm",
+          "price": 170,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": ["https://placehold.co/900x600?text=BXTR+Prizm"]
+        }
+      ],
+      "specs": { "hasPrescription": false, "tags": ["lifestyle"] }
+    },
+    {
+      "id": 20,
+      "slug": "manorburn",
+      "name": "Manorburn",
+      "brand": "Oakley",
+      "category": "sunglasses",
+      "description": "Everyday frame for casual wear with comfort-first fit.",
+      "heroImage": "https://placehold.co/900x600?text=Manorburn",
+      "minPrice": 140,
+      "variants": [
+        {
+          "id": "MANORBURN-STANDARD",
+          "name": "Matte Black / Grey",
+          "price": 140,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "STANDARD",
+          "images": ["https://placehold.co/900x600?text=Manorburn"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["lifestyle"] }
+    },
+
+    {
+      "id": 21,
+      "slug": "chamfer",
+      "name": "Chamfer",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Everyday optical frame designed for comfort and durability.",
+      "url": "https://www.oakley.com/en-us/product/W0OX8039",
+      "heroImage": "https://placehold.co/900x600?text=Chamfer+OX8039",
+      "minPrice": 160,
+      "variants": [
+        {
+          "id": "OX8039-SATIN-BLACK",
+          "name": "Satin Black (Frame Only)",
+          "price": 160,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Chamfer+Satin+Black"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["optical", "daily"] }
+    },
+    {
+      "id": 22,
+      "slug": "metalink",
+      "name": "Metalink",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Mixed-material optical design with grip-focused earsocks.",
+      "url": "https://www.oakley.com/en-us/product/W0OX8153",
+      "heroImage": "https://placehold.co/900x600?text=Metalink+OX8153",
+      "minPrice": 180,
+      "variants": [
+        {
+          "id": "OX8153-SATIN-BLACK",
+          "name": "Satin Black (Frame Only)",
+          "price": 180,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Metalink+Satin+Black"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["optical", "sport-grip"] }
+    },
+    {
+      "id": 23,
+      "slug": "exchange",
+      "name": "Exchange",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Mixed material frame inspired by Oakley heritage with grip texture earsocks.",
+      "url": "https://www.oakley.com/en-us/product/W0OX8055",
+      "heroImage": "https://placehold.co/900x600?text=Exchange+OX8055",
+      "minPrice": 170,
+      "variants": [
+        {
+          "id": "OX8055-FRAME",
+          "name": "Frame Only",
+          "price": 170,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Exchange"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["optical"] }
+    },
+    {
+      "id": 24,
+      "slug": "pitchman-r",
+      "name": "Pitchman R",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Lightweight optical frame with a modern round-inspired profile.",
+      "url": "https://www.oakley.com/en-us/product/W0OX8105",
+      "heroImage": "https://placehold.co/900x600?text=Pitchman+R+OX8105",
+      "minPrice": 170,
+      "variants": [
+        {
+          "id": "OX8105-FRAME",
+          "name": "Frame Only",
+          "price": 170,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Pitchman+R"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["optical"] }
+    },
+    {
+      "id": 25,
+      "slug": "bmng",
+      "name": "BMNG",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Mixed-material optical frame with Bio-Matter and C-5 temples.",
+      "url": "https://www.oakley.com/en-us/product/W0OX8150",
+      "heroImage": "https://placehold.co/900x600?text=BMNG+OX8150",
+      "minPrice": 180,
+      "variants": [
+        {
+          "id": "OX8150-01-53",
+          "sku": "OX8150 01-53",
+          "name": "Black (Frame Only)",
+          "price": 180,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=BMNG+OX8150"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["optical", "bio-matter"] }
+    },
+    {
+      "id": 26,
+      "slug": "hex-jector",
+      "name": "Hex Jector",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Performance optical with sport nosepads and retention-focused fit features.",
+      "url": "https://www.oakley.com/en-us/product/W0OX8032",
+      "heroImage": "https://placehold.co/900x600?text=Hex+Jector+OX8032",
+      "minPrice": 190,
+      "variants": [
+        {
+          "id": "OX8032-BLACK-INK",
+          "name": "Black Ink (Frame Only)",
+          "price": 190,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Hex+Jector"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["optical", "sport"] }
+    },
+    {
+      "id": 27,
+      "slug": "knolls",
+      "name": "Knolls",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Full-rim sports optical frame with adjustable fit features and no-slip retention.",
+      "url": "https://www.oakley.com/en-us/product/W0OX8144",
+      "heroImage": "https://placehold.co/900x600?text=Knolls+OX8144",
+      "minPrice": 190,
+      "variants": [
+        {
+          "id": "OX8144-FRAME",
+          "name": "Frame Only",
+          "price": 190,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Knolls"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["optical", "sport"] }
+    },
+    {
+      "id": 28,
+      "slug": "socket-5-5",
+      "name": "Socket 5.5",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Rectangular optical frame designed for everyday wear.",
+      "url": "https://www.oakley.com/en-us/product/W0OX3218",
+      "heroImage": "https://placehold.co/900x600?text=Socket+5.5+OX3218",
+      "minPrice": 160,
+      "variants": [
+        {
+          "id": "OX3218-SATIN-PEWTER",
+          "name": "Satin Pewter (Frame Only)",
+          "price": 160,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Socket+5.5"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["optical"] }
+    },
+
+    {
+      "id": 29,
+      "slug": "plank-2-0",
+      "name": "Plank 2.0",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Plank+2.0",
+      "minPrice": 160,
+      "variants": [
+        {
+          "id": "PLANK2-FRAME",
+          "price": 160,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Plank+2.0"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["optical"] }
+    },
+    {
+      "id": 30,
+      "slug": "currency",
+      "name": "Currency",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Currency",
+      "minPrice": 170,
+      "variants": [
+        {
+          "id": "CURRENCY-FRAME",
+          "price": 170,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Currency"]
+        }
+      ],
+      "specs": { "hasPrescription": true }
+    },
+    {
+      "id": 31,
+      "slug": "a-frame-optical",
+      "name": "A-Frame Optical",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=A-Frame+Optical",
+      "minPrice": 180,
+      "variants": [
+        {
+          "id": "AFRAME-FRAME",
+          "price": 180,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=A-Frame+Optical"]
+        }
+      ],
+      "specs": { "hasPrescription": true }
+    },
+    {
+      "id": 32,
+      "slug": "crosslink-zero",
+      "name": "Crosslink Zero",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Crosslink+Zero",
+      "minPrice": 180,
+      "variants": [
+        {
+          "id": "CROSSLINKZERO-FRAME",
+          "price": 180,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Crosslink+Zero"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["sport"] }
+    },
+    {
+      "id": 33,
+      "slug": "crosslink-switch",
+      "name": "Crosslink Switch",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Crosslink+Switch",
+      "minPrice": 190,
+      "variants": [
+        {
+          "id": "CROSSLINKSWITCH-FRAME",
+          "price": 190,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Crosslink+Switch"]
+        }
+      ],
+      "specs": { "hasPrescription": true }
+    },
+    {
+      "id": 34,
+      "slug": "gibston-optical",
+      "name": "Gibston Optical",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Gibston+Optical",
+      "minPrice": 170,
+      "variants": [
+        {
+          "id": "GIBSTON-FRAME",
+          "price": 170,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Gibston+Optical"]
+        }
+      ],
+      "specs": { "hasPrescription": true }
+    },
+    {
+      "id": 35,
+      "slug": "deadbolt-optical",
+      "name": "Deadbolt Optical",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Deadbolt+Optical",
+      "minPrice": 210,
+      "variants": [
+        {
+          "id": "DEADBOLT-FRAME",
+          "price": 210,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Deadbolt+Optical"]
+        }
+      ],
+      "specs": { "hasPrescription": true }
+    },
+    {
+      "id": 36,
+      "slug": "ox8143-seed",
+      "name": "Active Optical Frame 1",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Active+Optical+1",
+      "minPrice": 175,
+      "variants": [
+        {
+          "id": "ACTIVEOPT1-FRAME",
+          "price": 175,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Active+Optical+1"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["sport"] }
+    },
+    {
+      "id": 37,
+      "slug": "ox8145-seed",
+      "name": "Active Optical Frame 2",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Active+Optical+2",
+      "minPrice": 175,
+      "variants": [
+        {
+          "id": "ACTIVEOPT2-FRAME",
+          "price": 175,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Active+Optical+2"]
+        }
+      ],
+      "specs": { "hasPrescription": true }
+    },
+    {
+      "id": 38,
+      "slug": "ox8146-seed",
+      "name": "Lifestyle Optical Frame 1",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Lifestyle+Optical+1",
+      "minPrice": 155,
+      "variants": [
+        {
+          "id": "LIFESTYLEOPT1-FRAME",
+          "price": 155,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Lifestyle+Optical+1"]
+        }
+      ],
+      "specs": { "hasPrescription": true }
+    },
+    {
+      "id": 39,
+      "slug": "ox8147-seed",
+      "name": "Lifestyle Optical Frame 2",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Lifestyle+Optical+2",
+      "minPrice": 155,
+      "variants": [
+        {
+          "id": "LIFESTYLEOPT2-FRAME",
+          "price": 155,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Lifestyle+Optical+2"]
+        }
+      ],
+      "specs": { "hasPrescription": true }
+    },
+    {
+      "id": 40,
+      "slug": "gaming-optical",
+      "name": "Gaming Optical Frame",
+      "brand": "Oakley",
+      "category": "prescription",
+      "description": "Seed optical frame entry.",
+      "heroImage": "https://placehold.co/900x600?text=Gaming+Optical",
+      "minPrice": 165,
+      "variants": [
+        {
+          "id": "GAMINGOPT-FRAME",
+          "price": 165,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Gaming+Optical"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["gaming"] }
+    },
+
+    {
+      "id": 41,
+      "slug": "oakley-meta-hstn-transitions",
+      "name": "Oakley Meta HSTN Transitions",
+      "brand": "Oakley",
+      "category": "meta",
+      "description": "Performance AI glasses with Transitions lens options.",
+      "url": "https://www.oakley.com/en-us/product/W0OW8002",
+      "heroImage": "https://placehold.co/900x600?text=Oakley+Meta+HSTN",
+      "minPrice": 479,
+      "variants": [
+        {
+          "id": "W0OW8002-TRANSITIONS-AMETHYST",
+          "name": "Black / Transitions Amethyst",
+          "price": 479,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "TRANSITIONS",
+          "images": ["https://placehold.co/900x600?text=Meta+HSTN+Transitions"]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["meta", "smart-glasses"] }
+    },
+    {
+      "id": 42,
+      "slug": "oakley-meta-vanguard",
+      "name": "Oakley Meta Vanguard",
+      "brand": "Oakley",
+      "category": "meta",
+      "description": "Performance AI glasses (Meta) with Prizm lens options.",
+      "url": "https://www.oakley.com/en-us/product/W0OW8001",
+      "heroImage": "https://placehold.co/900x600?text=Oakley+Meta+Vanguard",
+      "minPrice": 499,
+      "variants": [
+        {
+          "id": "W0OW8001-PRIZM-24K",
+          "name": "Black / Prizm 24K",
+          "price": 499,
+          "currency": "USD",
+          "inStock": true,
+          "lensTechnology": "PRIZM",
+          "images": [
+            "https://placehold.co/900x600?text=Meta+Vanguard+Prizm+24K"
+          ]
+        }
+      ],
+      "specs": { "hasPrescription": true, "tags": ["meta", "smart-glasses"] }
+    },
+    {
+      "id": 43,
+      "slug": "meta-vanguard-replacement-lenses",
+      "name": "Oakley Meta Vanguard Replacement Lenses",
+      "brand": "Oakley",
+      "category": "meta",
+      "description": "Replacement lenses designed for Oakley Meta Vanguard.",
+      "url": "https://www.oakley.com/en-us/product/W0AW18001R",
+      "heroImage": "https://placehold.co/900x600?text=Meta+Vanguard+Lenses",
+      "minPrice": 99,
+      "variants": [
+        {
+          "id": "W0AW18001R-LENSES",
+          "price": 99,
+          "currency": "USD",
+          "inStock": true,
+          "images": [
+            "https://placehold.co/900x600?text=Meta+Vanguard+Replacement+Lenses"
+          ]
+        }
+      ],
+      "specs": { "tags": ["meta", "replacement"] }
+    },
+
+    {
+      "id": 44,
+      "slug": "flight-deck-l",
+      "name": "Flight Deck L Snow Goggles",
+      "brand": "Oakley",
+      "category": "goggles",
+      "description": "Large-fit snow goggle platform with Prizm Snow lens options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO7050S",
+      "heroImage": "https://placehold.co/900x600?text=Flight+Deck+L",
+      "minPrice": 200,
+      "variants": [
+        {
+          "id": "W0OO7050S-MATTE-BLACK",
+          "name": "Matte Black / Prizm Snow (varies)",
+          "price": 200,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Flight+Deck+L"]
+        }
+      ],
+      "specs": { "tags": ["snow", "prizm-snow"] }
+    },
+    {
+      "id": 45,
+      "slug": "fall-line-m",
+      "name": "Fall Line M Snow Goggles",
+      "brand": "Oakley",
+      "category": "goggles",
+      "description": "Mid-size snow goggle platform with Prizm Snow lens options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO7103S",
+      "heroImage": "https://placehold.co/900x600?text=Fall+Line+M",
+      "minPrice": 190,
+      "variants": [
+        {
+          "id": "W0OO7103S-MATTE-BLACK",
+          "price": 190,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Fall+Line+M"]
+        }
+      ],
+      "specs": { "tags": ["snow"] }
+    },
+    {
+      "id": 46,
+      "slug": "flight-tracker-m",
+      "name": "Flight Tracker M Snow Goggles",
+      "brand": "Oakley",
+      "category": "goggles",
+      "description": "Mid-size snow goggle with multiple Prizm Snow lens options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO7105S",
+      "heroImage": "https://placehold.co/900x600?text=Flight+Tracker+M",
+      "minPrice": 163,
+      "variants": [
+        {
+          "id": "W0OO7105S-MATTE-BLACK",
+          "name": "Matte Black / Prizm Snow Persimmon",
+          "price": 163,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Flight+Tracker+M"]
+        }
+      ],
+      "specs": { "tags": ["snow"] }
+    },
+    {
+      "id": 47,
+      "slug": "line-miner-m",
+      "name": "Line Miner M Snow Goggles",
+      "brand": "Oakley",
+      "category": "goggles",
+      "description": "Snow goggle with broad peripheral vision and lens options.",
+      "url": "https://www.oakley.com/en-us/product/W0OO7093S",
+      "heroImage": "https://placehold.co/900x600?text=Line+Miner+M",
+      "minPrice": 190,
+      "variants": [
+        {
+          "id": "W0OO7093S-MATTE-BLACK",
+          "price": 190,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Line+Miner+M"]
+        }
+      ],
+      "specs": { "tags": ["snow"] }
+    },
+
+    {
+      "id": 48,
+      "slug": "aro3-mips",
+      "name": "ARO3 - MIPS",
+      "brand": "Oakley",
+      "category": "helmets",
+      "description": "Cycling helmet engineered for ventilation on climbs and heat.",
+      "url": "https://www.oakley.com/en-us/product/99470",
+      "heroImage": "https://placehold.co/900x600?text=ARO3+MIPS",
+      "minPrice": 175,
+      "variants": [
+        {
+          "id": "99470-001",
+          "sku": "99470-001",
+          "price": 175,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=ARO3+99470-001"]
+        }
+      ],
+      "specs": { "mips": true, "tags": ["cycling"] }
+    },
+    {
+      "id": 49,
+      "slug": "aro7-mips",
+      "name": "ARO7 - MIPS",
+      "brand": "Oakley",
+      "category": "helmets",
+      "description": "Aero helmet built for time trials and triathlon.",
+      "url": "https://www.oakley.com/en-us/product/99468",
+      "heroImage": "https://placehold.co/900x600?text=ARO7+MIPS",
+      "minPrice": 300,
+      "variants": [
+        {
+          "id": "99468-100",
+          "sku": "99468-100",
+          "price": 300,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=ARO7+99468-100"]
+        }
+      ],
+      "specs": { "mips": true, "tags": ["cycling", "tt"] }
+    },
+    {
+      "id": 50,
+      "slug": "aro5-race-mips",
+      "name": "ARO5 Race - MIPS",
+      "brand": "Oakley",
+      "category": "helmets",
+      "description": "Aerodynamic and ventilated helmet with 19 ventilation ports.",
+      "url": "https://www.oakley.com/en-us/product/FOS900927",
+      "heroImage": "https://placehold.co/900x600?text=ARO5+Race",
+      "minPrice": 250,
+      "variants": [
+        {
+          "id": "FOS900927-MATTE-BLACK",
+          "price": 250,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=ARO5+Race"]
+        }
+      ],
+      "specs": { "mips": true, "tags": ["cycling", "road"] }
+    },
+    {
+      "id": 51,
+      "slug": "aro3-allroad",
+      "name": "ARO3 Allroad",
+      "brand": "Oakley",
+      "category": "helmets",
+      "description": "Allroad helmet with removable dual-position visor attached by magnets.",
+      "url": "https://www.oakley.com/en-us/product/FOS901117",
+      "heroImage": "https://placehold.co/900x600?text=ARO3+Allroad",
+      "minPrice": 210,
+      "variants": [
+        {
+          "id": "FOS901117",
+          "price": 210,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=ARO3+Allroad"]
+        }
+      ],
+      "specs": { "mips": true, "tags": ["gravel", "visor"] }
+    },
+
+    {
+      "id": 52,
+      "slug": "b1b-tee",
+      "name": "B1B Logo Tee",
+      "brand": "Oakley",
+      "category": "apparel",
+      "description": "Seed apparel entry.",
+      "heroImage": "https://placehold.co/900x600?text=B1B+Tee",
+      "minPrice": 30,
+      "variants": [
+        {
+          "id": "B1B-TEE-S",
+          "price": 30,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=B1B+Tee"]
+        }
+      ],
+      "specs": { "gender": "unisex", "tags": ["tee"] }
+    },
+    {
+      "id": 53,
+      "slug": "performance-hoodie",
+      "name": "Performance Hoodie",
+      "brand": "Oakley",
+      "category": "apparel",
+      "description": "Seed apparel entry.",
+      "heroImage": "https://placehold.co/900x600?text=Hoodie",
+      "minPrice": 65,
+      "variants": [
+        {
+          "id": "HOODIE-M",
+          "price": 65,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Hoodie"]
+        }
+      ],
+      "specs": { "gender": "unisex", "tags": ["hoodie"] }
+    },
+
+    {
+      "id": 54,
+      "slug": "anti-fog-cleaner-4-pack",
+      "name": "Anti-fog Cleaner (4 Pack)",
+      "brand": "Oakley",
+      "category": "accessories",
+      "description": "Anti-fog cleaner multipack.",
+      "url": "https://www.oakley.com/en-us/product/700285421537",
+      "heroImage": "https://placehold.co/900x600?text=Anti-fog+Cleaner",
+      "minPrice": 45,
+      "variants": [
+        {
+          "id": "700285421537",
+          "price": 45,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Anti-fog+Cleaner"]
+        }
+      ],
+      "specs": { "tags": ["care", "cleaning"] }
+    },
+    {
+      "id": 55,
+      "slug": "switchback-hydration-pack",
+      "name": "Switchback Hydration Pack",
+      "brand": "Oakley",
+      "category": "accessories",
+      "description": "Water-repellent hydration pack with storage pocketing and helmet carrier features.",
+      "url": "https://www.oakley.com/en-us/product/FOS900848",
+      "heroImage": "https://placehold.co/900x600?text=Hydration+Pack",
+      "minPrice": 110,
+      "variants": [
+        {
+          "id": "FOS900848-BLACKOUT",
+          "price": 110,
+          "currency": "USD",
+          "inStock": true,
+          "images": [
+            "https://placehold.co/900x600?text=Switchback+Hydration+Pack"
+          ]
+        }
+      ],
+      "specs": { "tags": ["bag", "hydration"] }
+    },
+    {
+      "id": 56,
+      "slug": "road-trip-rc-backpack",
+      "name": "Road Trip RC Backpack",
+      "brand": "Oakley",
+      "category": "accessories",
+      "description": "Backpack with laptop pocket and internal organization.",
+      "url": "https://www.oakley.com/en-us/product/FOS901038",
+      "heroImage": "https://placehold.co/900x600?text=Backpack",
+      "minPrice": 95,
+      "variants": [
+        {
+          "id": "FOS901038",
+          "price": 95,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Road+Trip+RC+Backpack"]
+        }
+      ],
+      "specs": { "tags": ["bag"] }
+    },
+    {
+      "id": 57,
+      "slug": "voyager-belt-bag",
+      "name": "Voyager Belt Bag",
+      "brand": "Oakley",
+      "category": "accessories",
+      "description": "Water-repellent belt bag with pockets and breathable backing.",
+      "url": "https://www.oakley.com/en-us/product/FOS900485",
+      "heroImage": "https://placehold.co/900x600?text=Belt+Bag",
+      "minPrice": 55,
+      "variants": [
+        {
+          "id": "FOS900485",
+          "price": 55,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Voyager+Belt+Bag"]
+        }
+      ],
+      "specs": { "tags": ["bag"] }
+    },
+    {
+      "id": 58,
+      "slug": "reserve-pouch",
+      "name": "Reserve Pouch",
+      "brand": "Oakley",
+      "category": "accessories",
+      "description": "Water-repellent pouch bag with adjustable capacity and compartments.",
+      "url": "https://www.oakley.com/en-us/product/FOS902081",
+      "heroImage": "https://placehold.co/900x600?text=Reserve+Pouch",
+      "minPrice": 60,
+      "variants": [
+        {
+          "id": "FOS902081",
+          "price": 60,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Reserve+Pouch"]
+        }
+      ],
+      "specs": { "tags": ["bag"] }
+    },
+
+    {
+      "id": 59,
+      "slug": "light-breathe",
+      "name": "Oakley Light Breathe",
+      "brand": "Oakley",
+      "category": "shoes",
+      "description": "Breathable men’s sneaker with engineered mesh upper and grippy sole.",
+      "url": "https://www.oakley.com/en-us/product/FOF100588",
+      "heroImage": "https://placehold.co/900x600?text=Light+Breathe",
+      "minPrice": 120,
+      "variants": [
+        {
+          "id": "FOF100588-012",
+          "sku": "FOF100588-012",
+          "price": 120,
+          "currency": "USD",
+          "inStock": true,
+          "images": [
+            "https://placehold.co/900x600?text=Light+Breathe+FOF100588-012"
+          ]
+        }
+      ],
+      "specs": { "gender": "men", "tags": ["sneaker"] }
+    },
+    {
+      "id": 60,
+      "slug": "oakley-madic",
+      "name": "Oakley Madic",
+      "brand": "Oakley",
+      "category": "shoes",
+      "description": "Ripstop and synthetic upper with stability-focused outsole and EVA midsole comfort.",
+      "url": "https://www.oakley.com/en-us/product/FOF100284",
+      "heroImage": "https://placehold.co/900x600?text=Madic",
+      "minPrice": 130,
+      "variants": [
+        {
+          "id": "FOF100284-01K",
+          "sku": "FOF100284-01K",
+          "price": 130,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Madic+FOF100284-01K"]
+        }
+      ],
+      "specs": { "gender": "men", "tags": ["trail"] }
+    },
+    {
+      "id": 61,
+      "slug": "edge-icon-golf",
+      "name": "Oakley Edge Icon",
+      "brand": "Oakley",
+      "category": "shoes",
+      "description": "Golf shoe designed for stability, balance, comfort and flexibility through swing motion.",
+      "url": "https://www.oakley.com/en-us/product/FOF100539",
+      "heroImage": "https://placehold.co/900x600?text=Edge+Icon",
+      "minPrice": 140,
+      "variants": [
+        {
+          "id": "FOF100539",
+          "price": 140,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Edge+Icon"]
+        }
+      ],
+      "specs": { "tags": ["golf"] }
+    },
+    {
+      "id": 62,
+      "slug": "oakley-strike-shoe",
+      "name": "Oakley Strike",
+      "brand": "Oakley",
+      "category": "shoes",
+      "description": "Cupsole construction with EVA midsole and grippy rubber tread; speed-inspired detailing.",
+      "url": "https://www.oakley.com/en-us/product/FOF100703",
+      "heroImage": "https://placehold.co/900x600?text=Oakley+Strike",
+      "minPrice": 125,
+      "variants": [
+        {
+          "id": "FOF100703-021",
+          "price": 125,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Oakley+Strike"]
+        }
+      ],
+      "specs": { "tags": ["sneaker"] }
+    },
+    {
+      "id": 63,
+      "slug": "factory-team-suede-flesh",
+      "name": "Oakley Factory Team Suede Flesh",
+      "brand": "Oakley",
+      "category": "shoes",
+      "description": "Factory Team shoe line; suede upper styling (seed).",
+      "url": "https://www.oakley.com/en-us/product/FOF100658",
+      "heroImage": "https://placehold.co/900x600?text=Suede+Flesh",
+      "minPrice": 160,
+      "variants": [
+        {
+          "id": "FOF100658",
+          "price": 160,
+          "currency": "USD",
+          "inStock": true,
+          "images": ["https://placehold.co/900x600?text=Suede+Flesh"]
+        }
+      ],
+      "specs": { "tags": ["factory-team"] }
+    }
+  ],
+
+  "meta": {
+    "generatedAt": "2026-02-19",
+    "currencyDefault": "USD",
+    "notes": [
+      "This dataset is a starter seed for local development.",
+      "Some items include official Oakley PDP URLs; many seed entries use placeholders for image/price and should be normalized later."
+    ]
+  }
+}

@@ -26,3 +26,5 @@ logs
 
 # Other
 initialDB.json
+.vercel
+.env*.local
