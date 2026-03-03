@@ -18,30 +18,48 @@ const layoutClass = computed(() => productLayout.value);
       <div class="productImagesWrapper" :class="layoutClass">
         <!-- HERO IMAGE -->
         <div class="productImage hero">
-          <NuxtImg
-            :src="product.heroImage"
-            :alt="`product image ${product.name}`"
-          />
+          <RandomImage height="1200" width="1200" :topic="product.category" />
         </div>
         <!-- SECONDARY IMAGES -->
         <div class="productImage">
-          <RandomImage height="1200" width="1200" :topic="product.category" />
+          <NuxtImg
+            :src="`https://placehold.co/900x600/981313/e5e5e5?text=${product.name.replace(/\s+/g, '+')}&font=AvenirNext`"
+            :alt="`product image ${product.name}`"
+          />
         </div>
         <div class="productImage">
-          <RandomImage height="1201" width="1201" :topic="product.category" />
+          <NuxtImg
+            :src="`https://placehold.co/900x600/745527/ceb083?text=${product.name.replace(/\s+/g, '+')}&font=AvenirNext`"
+            :alt="`product image ${product.name}`"
+          />
         </div>
         <div class="productImage">
-          <RandomImage height="1202" width="1202" :topic="product.category" />
+          <NuxtImg
+            :src="`https://placehold.co/900x600/69c2c9/1f1f24?text=${product.name.replace(/\s+/g, '+')}&font=AvenirNext`"
+            :alt="`product image ${product.name}`"
+          />
         </div>
         <div class="productImage">
-          <RandomImage height="1203" width="1203" :topic="product.category" />
+          <NuxtImg
+            :src="`https://placehold.co/900x600/8ce55f/1f1f24?text=${product.name.replace(/\s+/g, '+')}&font=AvenirNext`"
+            :alt="`product image ${product.name}`"
+          />
         </div>
       </div>
 
       <div class="productDetails">
-        <h1>Product: {{ product.name }}</h1>
-        <p>${{ product.minPrice }}</p>
-        <p>Prescription Available</p>
+        <h1>{{ product.name }}</h1>
+        <h3>{{ product.category }}</h3>
+        <p v-if="product.minPrice">${{ product.minPrice }}</p>
+        <p
+          v-if="
+            product.category === 'sunglasses' ||
+            product.category === 'prescription' ||
+            product.category === 'meta'
+          "
+        >
+          Prescription Available
+        </p>
       </div>
     </div>
 

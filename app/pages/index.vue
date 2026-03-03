@@ -16,8 +16,8 @@ import HomePageBanner from "../components/homepage/HomePageBanner.vue";
           ctaBannerValues: [
             {
               id: 1,
-              ctaValue: 'apparel cta',
-              ctaLink: '/category/apparel',
+              ctaValue: 'sunglasses cta',
+              ctaLink: '/category/sunglasses',
             },
             {
               id: 2,
@@ -37,10 +37,6 @@ import HomePageBanner from "../components/homepage/HomePageBanner.vue";
             { id: 3, ctaValue: 'meta cta', ctaLink: '/category/meta' },
           ],
         },
-      ]"
-    />
-    <HomePageBanner
-      :bannerObject="[
         {
           id: 3,
           backGroundImage: 'images/imageHDTest3.jpg',
