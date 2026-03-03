@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { TProduct } from "../../types/cms";
+import { useCurrency } from "../composables/useCurrency";
 
 const prop = defineProps<{
   products?: TProduct[];
@@ -18,7 +19,7 @@ const prop = defineProps<{
         />
         <NuxtLink :to="`/products/${product.slug}`">
           <p>{{ product.name }}</p>
-          <p>${{ product.minPrice }}</p>
+          <p>{{ useCurrency(product.minPrice) }}</p>
           <p>Prescription Available</p>
         </NuxtLink>
       </div>

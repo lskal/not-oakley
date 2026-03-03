@@ -4,12 +4,13 @@ const slug = computed(() => String(route.params.slug));
 
 const { data: product } = await useFetch(() => `/api/products/${slug.value}`);
 
-// TODO: set a value in CMS with productLayout
-const productLayout = ref<"hero-square" | "hero-16x9" | "hero-4x5">(
-  "hero-16x9",
-);
+/* pass layout as fetch from db */
+const layouts = ["hero-square", "hero-16x9", "hero-4x5"] as const;
 
-const layoutClass = computed(() => productLayout.value);
+const randomLayout = false;
+const layoutClass = randomLayout
+  ? layouts[useRandomNumber(0, layouts.length - 1)]
+  : "hero-square";
 </script>
 
 <template>
@@ -50,7 +51,7 @@ const layoutClass = computed(() => productLayout.value);
       <div class="productDetails">
         <h1>{{ product.name }}</h1>
         <h3>{{ product.category }}</h3>
-        <p v-if="product.minPrice">${{ product.minPrice }}</p>
+        <p v-if="product.minPrice">{{ useCurrency(product.minPrice) }}</p>
         <p
           v-if="
             product.category === 'sunglasses' ||
