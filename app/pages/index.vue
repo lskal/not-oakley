@@ -16,12 +16,12 @@ import HomePageBanner from "../components/homepage/HomePageBanner.vue";
           ctaBannerValues: [
             {
               id: 1,
-              ctaValue: 'sunglasses cta',
+              ctaValue: 'shop sunglasses',
               ctaLink: '/category/sunglasses',
             },
             {
               id: 2,
-              ctaValue: 'prescription cta',
+              ctaValue: 'shop prescription',
               ctaLink: '/category/prescription',
             },
           ],
@@ -34,7 +34,7 @@ import HomePageBanner from "../components/homepage/HomePageBanner.vue";
           subtitle: 'second subtitle',
           layoutBanner: 'right',
           ctaBannerValues: [
-            { id: 3, ctaValue: 'meta cta', ctaLink: '/category/meta' },
+            { id: 3, ctaValue: 'shop meta', ctaLink: '/category/meta' },
           ],
         },
         {
@@ -45,10 +45,10 @@ import HomePageBanner from "../components/homepage/HomePageBanner.vue";
           subtitle: 'subtitle',
           layoutBanner: 'center',
           ctaBannerValues: [
-            { id: 4, ctaValue: 'goggles cta', ctaLink: '/category/goggles' },
+            { id: 4, ctaValue: 'shop goggles', ctaLink: '/category/goggles' },
             {
               id: 5,
-              ctaValue: 'apparel cta',
+              ctaValue: 'shop apparel',
               ctaLink: '/category/apparel',
             },
           ],
@@ -63,16 +63,16 @@ import HomePageBanner from "../components/homepage/HomePageBanner.vue";
           preTitle: 'first preTitle',
           title: 'firts title',
           subtitle: 'fitst subtitle',
-          layoutBanner: 'left',
+          layoutBanner: 'right',
           ctaBannerValues: [
             {
               id: 6,
-              ctaValue: 'accessories cta',
+              ctaValue: 'shop accessories',
               ctaLink: '/category/accessories',
             },
             {
               id: 7,
-              ctaValue: 'shoes cta',
+              ctaValue: 'shop shoes',
               ctaLink: '/category/shoes',
             },
           ],

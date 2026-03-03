@@ -15,7 +15,7 @@ const { data: products } = await useFetch("/api/products?random=5", {
 
     <div class="headerWishlistLinks">
       <NuxtLink to="/category/sunglasses">View New Sunglasses</NuxtLink>
-      <NuxtLink to="/category/eyeglasses">View New Eyeglasses</NuxtLink>
+      <NuxtLink to="/category/prescription">View New Eyeglasses</NuxtLink>
       <NuxtLink to="/category/apparel">View New Clothing</NuxtLink>
     </div>
 
