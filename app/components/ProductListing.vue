@@ -11,7 +11,7 @@ const prop = defineProps<{
     <slot name="title"></slot>
 
     <div class="listing">
-      <div v-for="product in products" class="listingItem">
+      <div v-for="product in products" :key="product.id" class="listingItem">
         <NuxtImg
           :src="product.heroImage"
           :alt="`product image ${product.name}`"

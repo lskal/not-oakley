@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import ProductListing from "../components/ProductListing.vue";
+
+const { data: products } = await useFetch("/api/products?random=5", {
+  server: false,
+});
 </script>
 
 <template>
@@ -8,13 +12,15 @@ import ProductListing from "../components/ProductListing.vue";
       <h2>YOUR WISHLIST IS EMPTY</h2>
       <p>Discover our newest arrivals to get you started.</p>
     </div>
+
     <div class="headerWishlistLinks">
       <NuxtLink to="/category/sunglasses">View New Sunglasses</NuxtLink>
       <NuxtLink to="/category/eyeglasses">View New Eyeglasses</NuxtLink>
-      <NuxtLink to="/category/clothing">View New Clothing </NuxtLink>
+      <NuxtLink to="/category/apparel">View New Clothing</NuxtLink>
     </div>
+
     <div class="wishlistCarousel">
-      <ProductListing>
+      <ProductListing :products="products">
         <template #title><h2>POPULAR ITEMS FOR YOU</h2></template>
       </ProductListing>
     </div>
