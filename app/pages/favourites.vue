@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ProductListing from "../components/ProductListing.vue";
+</script>
 
 <template>
   <div class="container">
@@ -12,7 +14,9 @@
       <NuxtLink to="/category/clothing">View New Clothing </NuxtLink>
     </div>
     <div class="wishlistCarousel">
-      <WishlistCarosel>POPULAR ITEMS FOR YOU</WishlistCarosel>>
+      <ProductListing>
+        <template #title><h2>POPULAR ITEMS FOR YOU</h2></template>
+      </ProductListing>
     </div>
   </div>
 </template>

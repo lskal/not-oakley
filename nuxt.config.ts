@@ -8,6 +8,10 @@ export default defineNuxtConfig({
 
   modules: ["@nuxt/image"],
 
+  runtimeConfig: {
+    blobReadWriteToken: process.env.BLOB_READ_WRITE_TOKEN,
+  },
+
   app: {
     head: {
       link: [
@@ -26,6 +30,7 @@ export default defineNuxtConfig({
         },
         { rel: "manifest", href: "/favicon/site.webmanifest" },
       ],
+
       meta: [
         {
           name: "apple-mobile-web-app-title",

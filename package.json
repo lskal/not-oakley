@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@iconify/vue": "^5.0.0",
+    "@types/node": "^25.3.3",
     "sass": "^1.97.3"
   }
 }

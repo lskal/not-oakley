@@ -2,16 +2,7 @@
 const route = useRoute();
 const slug = computed(() => String(route.params.slug));
 
-/* 
-fetch
-const route = useRoute();
-const slug = computed(() => String(route.params.slug));
-
-const { data: product } = await useFetch(
-  () => `/api/products/${slug.value}`
-);
-
-*/
+const { data: product } = await useFetch(() => `/api/products/${slug.value}`);
 
 // TODO: set a value in CMS with productLayout
 const productLayout = ref<"hero-square" | "hero-16x9" | "hero-4x5">(
@@ -27,25 +18,30 @@ const layoutClass = computed(() => productLayout.value);
       <div class="productImagesWrapper" :class="layoutClass">
         <!-- HERO IMAGE -->
         <div class="productImage hero">
-          <RandomImage height="1600" width="1600" topic="sunglasses" />
+          <NuxtImg
+            :src="product.heroImage"
+            :alt="`product image ${product.name}`"
+          />
         </div>
         <!-- SECONDARY IMAGES -->
         <div class="productImage">
-          <RandomImage height="1200" width="1200" topic="sunglasses" />
+          <RandomImage height="1200" width="1200" :topic="product.category" />
         </div>
         <div class="productImage">
-          <RandomImage height="1201" width="1201" topic="sunglasses" />
+          <RandomImage height="1201" width="1201" :topic="product.category" />
         </div>
         <div class="productImage">
-          <RandomImage height="1202" width="1202" topic="sunglasses" />
+          <RandomImage height="1202" width="1202" :topic="product.category" />
         </div>
         <div class="productImage">
-          <RandomImage height="1203" width="1203" topic="sunglasses" />
+          <RandomImage height="1203" width="1203" :topic="product.category" />
         </div>
       </div>
 
       <div class="productDetails">
-        <h1>Product: {{ slug }}</h1>
+        <h1>Product: {{ product.name }}</h1>
+        <p>${{ product.minPrice }}</p>
+        <p>Prescription Available</p>
       </div>
     </div>
 

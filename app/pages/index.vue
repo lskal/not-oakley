@@ -16,8 +16,8 @@ import HomePageBanner from "../components/homepage/HomePageBanner.vue";
           ctaBannerValues: [
             {
               id: 1,
-              ctaValue: 'sunglasses cta',
-              ctaLink: '/category/sunglasses',
+              ctaValue: 'apparel cta',
+              ctaLink: '/category/apparel',
             },
             {
               id: 2,
@@ -34,7 +34,7 @@ import HomePageBanner from "../components/homepage/HomePageBanner.vue";
           subtitle: 'second subtitle',
           layoutBanner: 'right',
           ctaBannerValues: [
-            { id: 3, ctaValue: 'apparel cta', ctaLink: '/category/apparel' },
+            { id: 3, ctaValue: 'meta cta', ctaLink: '/category/meta' },
           ],
         },
       ]"
@@ -49,11 +49,35 @@ import HomePageBanner from "../components/homepage/HomePageBanner.vue";
           subtitle: 'subtitle',
           layoutBanner: 'center',
           ctaBannerValues: [
-            { id: 5, ctaValue: 'apparel cta', ctaLink: '/category/apparel' },
+            { id: 4, ctaValue: 'goggles cta', ctaLink: '/category/goggles' },
+            {
+              id: 5,
+              ctaValue: 'apparel cta',
+              ctaLink: '/category/apparel',
+            },
+          ],
+        },
+      ]"
+    />
+    <HomePageBanner
+      :bannerObject="[
+        {
+          id: 4,
+          backGroundImage: 'images/imageHDTest4.jpg',
+          preTitle: 'first preTitle',
+          title: 'firts title',
+          subtitle: 'fitst subtitle',
+          layoutBanner: 'left',
+          ctaBannerValues: [
             {
               id: 6,
               ctaValue: 'accessories cta',
               ctaLink: '/category/accessories',
+            },
+            {
+              id: 7,
+              ctaValue: 'shoes cta',
+              ctaLink: '/category/shoes',
             },
           ],
         },

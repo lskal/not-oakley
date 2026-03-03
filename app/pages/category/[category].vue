@@ -1,6 +1,12 @@
 <script setup lang="ts">
+import ProductListing from "../../components/ProductListing.vue";
+
 const route = useRoute();
 const category = computed(() => String(route.params.category));
+
+const { data: products } = await useFetch(
+  () => `/api/products?category=${encodeURIComponent(category.value)}`,
+);
 
 const capitalizeFirstLetter = (word: string) => {
   if (!word) return "";
@@ -25,10 +31,7 @@ const capitalizedCategory = computed(() =>
     </div>
     <div class="filterNav">Filter</div>
     <div class="replaceProducts">
-      <!-- TODO: replace with products -->
-      <WishlistCarosel />
-      <WishlistCarosel />
-      <WishlistCarosel />
+      <ProductListing :products="products" />
     </div>
   </div>
 </template>
