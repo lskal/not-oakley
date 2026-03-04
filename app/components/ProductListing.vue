@@ -20,7 +20,7 @@ const prop = defineProps<{
         <NuxtLink :to="`/products/${product.slug}`">
           <p>{{ product.name }}</p>
           <p>{{ useCurrency(product.minPrice) }}</p>
-          <p>Prescription Available</p>
+          <p v-if="product.specs?.hasPrescription">Prescription Available</p>
         </NuxtLink>
       </div>
     </div>
