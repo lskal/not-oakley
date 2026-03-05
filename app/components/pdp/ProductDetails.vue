@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { TProduct } from "../../../types/cms";
+import CustomCta from "../buttons/CustomCta.vue";
 
 const props = defineProps<{
   product: TProduct;
@@ -23,9 +24,17 @@ const cartOpen = ref(false);
     </div>
   </div>
 
-  <button @click="cartOpen = true">Open Cart</button>
+  <CustomCta
+    textValue="Add to cart"
+    @click="cartOpen = true"
+    link="#"
+    backgroundColor="blue"
+    hoverBackgroundColor="darkblue"
+    padding="10px"
+    style="width: 100%"
+  />
 
-  <SideDrawer v-model="cartOpen" side="left">
+  <SideDrawer v-model="cartOpen" side="right">
     <template #header="{ close }">
       <div
         style="
@@ -39,13 +48,19 @@ const cartOpen = ref(false);
       </div>
     </template>
 
-    <div>
+    <template #default>
       <!-- anything -->
       <p>Your cart content here</p>
-    </div>
+    </template>
 
     <template #footer>
-      <button style="width: 100%">Checkout</button>
+      <CustomCta
+        textValue="Checkout"
+        link="#"
+        backgroundColor="tomato"
+        hoverBackgroundColor="darkred"
+        isUppercase
+      />
     </template>
   </SideDrawer>
 </template>

@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import ProductListing from "../../components/ProductListing.vue";
+import ProductListing from "../../components/plp/ProductListing.vue";
+
+definePageMeta({
+  layout: "category-layout",
+});
 
 const route = useRoute();
 const category = computed(() => String(route.params.category));
@@ -30,9 +34,17 @@ const capitalizedCategory = computed(() =>
       <h1>{{ capitalizedCategory }}</h1>
     </div>
     <div class="filterNav">Filter</div>
-    <div class="replaceProducts">
-      <ProductListing :products="products" />
-    </div>
+    <main
+      class="main-content"
+      id="main-content"
+      tabindex="-1"
+      role="main"
+      aria-label="Main content"
+    >
+      <div class="productsListing">
+        <ProductListing :products="products" />
+      </div>
+    </main>
   </div>
 </template>
 

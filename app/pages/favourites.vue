@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProductListing from "../components/ProductListing.vue";
+import ProductListing from "../components/plp/ProductListing.vue";
 
 const { data: products } = await useFetch("/api/products?random=5", {
   server: false,

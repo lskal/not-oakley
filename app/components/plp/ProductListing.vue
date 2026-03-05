@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { TProduct } from "../../types/cms";
-import { useCurrency } from "../composables/useCurrency";
+import type { TProduct } from "../../../types/cms";
+import { useCurrency } from "../../composables/useCurrency";
 
 const prop = defineProps<{
   products?: TProduct[];
@@ -8,7 +8,7 @@ const prop = defineProps<{
 </script>
 
 <template>
-  <div class="wishlistCaroselWrapper">
+  <div class="productListingWrapper">
     <slot name="title"></slot>
 
     <div class="listing">
@@ -28,7 +28,7 @@ const prop = defineProps<{
 </template>
 
 <style scoped lang="scss">
-.wishlistCaroselWrapper {
+.productListingWrapper {
   margin-top: 50px;
   margin-bottom: 200px;
 
