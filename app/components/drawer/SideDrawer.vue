@@ -35,7 +35,7 @@ const props = withDefaults(
     closeOnOverlay: true,
     closeOnEsc: true,
     lockScroll: true,
-    zIndex: 60,
+    zIndex: 50,
 
     autofocusPanel: true,
     trapFocus: true,

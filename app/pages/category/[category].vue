@@ -34,7 +34,7 @@ const capitalizedCategory = computed(() =>
       <h1>{{ capitalizedCategory }}</h1>
     </div>
     <div class="filterNav">Filter</div>
-    <main
+    <div
       class="main-content"
       id="main-content"
       tabindex="-1"
@@ -44,7 +44,7 @@ const capitalizedCategory = computed(() =>
       <div class="productsListing">
         <ProductListing :products="products" />
       </div>
-    </main>
+    </div>
   </div>
 </template>
 

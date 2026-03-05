@@ -9,7 +9,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <CustomIcon
         heightIcon="40"
         icon="entypo-social:facebook-with-circle"
-        link="#"
         label="icon"
         bgColor="darkblue"
         iconColor="white"
@@ -17,7 +16,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <CustomIcon
         heightIcon="40"
         icon="entypo-social:instagram-with-circle"
-        link="#"
         label="icon"
         bgColor="darkorange"
         iconColor="white"
@@ -25,7 +23,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <CustomIcon
         heightIcon="40"
         icon="entypo-social:twitter-with-circle"
-        link="#"
         label="icon"
         bgColor="dodgerblue"
         iconColor="white"
@@ -33,7 +30,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <CustomIcon
         heightIcon="40"
         icon="entypo-social:youtube-with-circle"
-        link="#"
         label="icon"
         bgColor="red"
         iconColor="white"
@@ -41,7 +37,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <CustomIcon
         heightIcon="40"
         icon="entypo-social:500px-with-circle"
-        link="#"
         label="icon"
         bgColor="green"
         iconColor="white"

@@ -6,7 +6,7 @@ import type { TCssSize, TNumberLike } from "../../../types/cms";
 const props = defineProps<{
   // required
   icon: string;
-  link: string;
+  link?: string;
 
   // optional
   iconHover?: string;
@@ -21,9 +21,17 @@ const props = defineProps<{
   paddingIcon?: TCssSize;
 }>();
 
+const emit = defineEmits<{
+  (e: "click", evt: MouseEvent): void;
+}>();
+
 const { isActivePath } = useIsActivePath();
 
-const isRouteActive = computed(() => isActivePath(props.link));
+const hasLink = computed(() => Boolean(props.link));
+
+const isRouteActive = computed(() =>
+  props.link ? isActivePath(props.link) : false,
+);
 const isHover = ref(false);
 
 const currentIcon = computed(() => {
@@ -35,11 +43,22 @@ const currentIcon = computed(() => {
 
 const preventClickAlert = (e: MouseEvent) => {
   e.preventDefault();
+  e.stopPropagation();
   alert("This page/link/element does not exist yet.");
 };
 
-const heightIconFormatted = useFormatNumber(props.heightIcon, 30);
+const handleClick = (e: MouseEvent) => {
+  if (props.preventClick) {
+    preventClickAlert(e);
+    return;
+  }
 
+  if (!hasLink.value) {
+    emit("click", e);
+  }
+};
+
+const heightIconFormatted = useFormatNumber(props.heightIcon, 30);
 const paddingIconFormatted = useFormatCssSize(() => props.paddingIcon);
 
 const wrapperComputedStyle = computed(() => {
@@ -63,30 +82,36 @@ const iconComputedStyle = computed(() => {
 </script>
 
 <template>
-  <NuxtLink
-    v-if="!preventClick"
-    :to="link"
-    class="iconBtn"
-    :aria-label="label"
-    @mouseenter="isHover = true"
-    @mouseleave="isHover = false"
-    @focus="isHover = true"
-    @blur="isHover = false"
-  >
-    <span v-if="bgColor" class="wrapperIconStyle" :style="wrapperComputedStyle">
+  <NuxtLink v-if="hasLink" :to="link!" custom v-slot="{ href, navigate }">
+    <a
+      :href="href"
+      class="iconBtn"
+      :aria-label="label"
+      @click="(e) => (preventClick ? preventClickAlert(e) : navigate(e))"
+      @mouseenter="isHover = true"
+      @mouseleave="isHover = false"
+      @focus="isHover = true"
+      @blur="isHover = false"
+    >
+      <span
+        v-if="bgColor"
+        class="wrapperIconStyle"
+        :style="wrapperComputedStyle"
+      >
+        <Icon
+          :icon="currentIcon"
+          :height="heightIconFormatted"
+          :style="iconComputedStyle"
+        />
+      </span>
+
       <Icon
+        v-else
         :icon="currentIcon"
         :height="heightIconFormatted"
         :style="iconComputedStyle"
       />
-    </span>
-
-    <Icon
-      v-else
-      :icon="currentIcon"
-      :height="heightIconFormatted"
-      :style="iconComputedStyle"
-    />
+    </a>
   </NuxtLink>
 
   <button
@@ -94,7 +119,7 @@ const iconComputedStyle = computed(() => {
     type="button"
     class="iconBtn"
     :aria-label="label"
-    @click="preventClickAlert"
+    @click="handleClick"
     @mouseenter="isHover = true"
     @mouseleave="isHover = false"
     @focus="isHover = true"

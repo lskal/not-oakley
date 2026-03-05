@@ -9,7 +9,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <li class="iconFooter">
         <CustomIcon
           icon="carbon:question-answering"
-          link="#"
           heightIcon="40"
           bgColor="lightgray"
           paddingIcon="10"
@@ -19,7 +18,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <li class="iconFooter">
         <CustomIcon
           icon="carbon:chat"
-          link="#"
           heightIcon="40"
           bgColor="lightgray"
           paddingIcon="10"
@@ -29,7 +27,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <li class="iconFooter">
         <CustomIcon
           icon="carbon:email"
-          link="#"
           heightIcon="40"
           bgColor="lightgray"
           paddingIcon="10"
@@ -39,7 +36,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <li class="iconFooter">
         <CustomIcon
           icon="carbon:delivery-parcel"
-          link="#"
           heightIcon="40"
           bgColor="lightgray"
           paddingIcon="10"
@@ -49,7 +45,6 @@ import CustomIcon from "../buttons/CustomIcon.vue";
       <li class="iconFooter">
         <CustomIcon
           icon="carbon:delivery"
-          link="#"
           heightIcon="40"
           bgColor="lightgray"
           paddingIcon="10"

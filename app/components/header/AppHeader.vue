@@ -20,7 +20,6 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
           iconHover="solar:hamburger-menu-bold-duotone"
           iconActive="solar:hamburger-menu-bold-duotone"
           label="menu"
-          link="#"
           v-if="isDesktop"
         />
 
@@ -69,7 +68,6 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
           iconHover="solar:map-point-search-bold-duotone"
           iconActive="solar:map-point-search-bold"
           label="search"
-          link="#"
         />
 
         <CustomIcon

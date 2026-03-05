@@ -8,7 +8,9 @@ import SkipToMainContent from "../components/header/SkipToMainContent.vue";
   <div>
     <SkipToMainContent />
     <AppHeader />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <AppFooter />
   </div>
 </template>

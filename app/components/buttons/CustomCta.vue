@@ -5,7 +5,7 @@ const props = withDefaults(
   defineProps<{
     // required props
     textValue: string;
-    link: string;
+    link?: string;
 
     // base  props
     disabled?: boolean;
@@ -32,6 +32,7 @@ const props = withDefaults(
     borderRadius?: TCssSize;
     borderWidth?: TCssSize;
     borderStyle?: "solid" | "dashed" | "dotted" | "double" | "none";
+    typeButton?: "button" | "submit" | "reset";
   }>(),
   {
     disabled: false,
@@ -46,6 +47,8 @@ const props = withDefaults(
     borderRadius: "var(--radius)",
     borderWidth: "1px",
     borderStyle: "solid",
+
+    typeButton: "button",
   },
 );
 
@@ -82,9 +85,36 @@ const formattedBorderWidth = useFormatCssSize(props.borderWidth);
 </script>
 
 <template>
-  <NuxtLink
-    :to="disabled ? undefined : link"
+  <NuxtLink v-if="link" :to="link" custom v-slot="{ href, navigate }">
+    <a
+      :href="href"
+      class="customCta"
+      :aria-label="formattedAriaLabel"
+      :aria-disabled="disabled ? 'true' : undefined"
+      :tabindex="disabled ? -1 : 0"
+      :style="{
+        margin: formattedMargin,
+        padding: formattedPadding,
+        borderRadius: formattedBorderRadius,
+        color: formattedTextColor,
+        backgroundColor: formattedBackgroundColor,
+        border: `${formattedBorderWidth} ${props.borderStyle} ${formattedBorderColor}`,
+      }"
+      @click="(e) => (disabled ? e.preventDefault() : navigate(e))"
+      @mouseenter="!disabled && (isHover = true)"
+      @mouseleave="isHover = false"
+      @focus="!disabled && (isHover = true)"
+      @blur="isHover = false"
+    >
+      {{ formattedTextValue }}
+    </a>
+  </NuxtLink>
+
+  <button
+    v-else
+    :type="typeButton"
     class="customCta"
+    :disabled="disabled"
     :aria-label="formattedAriaLabel"
     :aria-disabled="disabled ? 'true' : undefined"
     :tabindex="disabled ? -1 : 0"
@@ -96,14 +126,13 @@ const formattedBorderWidth = useFormatCssSize(props.borderWidth);
       backgroundColor: formattedBackgroundColor,
       border: `${formattedBorderWidth} ${props.borderStyle} ${formattedBorderColor}`,
     }"
-    @click="disabled && $event.preventDefault()"
     @mouseenter="!disabled && (isHover = true)"
     @mouseleave="isHover = false"
     @focus="!disabled && (isHover = true)"
     @blur="isHover = false"
   >
     {{ formattedTextValue }}
-  </NuxtLink>
+  </button>
 </template>
 
 <style scoped>
