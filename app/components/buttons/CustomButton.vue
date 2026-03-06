@@ -6,7 +6,6 @@ const props = withDefaults(
   defineProps<{
     // required props
     textValue: string;
-    link: string;
 
     // base  props
     disabled?: boolean;
@@ -33,6 +32,7 @@ const props = withDefaults(
     borderRadius?: TCssSize;
     borderWidth?: TCssSize;
     borderStyle?: "solid" | "dashed" | "dotted" | "double" | "none";
+    typeButton?: "button" | "submit" | "reset";
   }>(),
   {
     disabled: false,
@@ -47,34 +47,31 @@ const props = withDefaults(
     borderRadius: "var(--radius)",
     borderWidth: "1px",
     borderStyle: "solid",
+
+    typeButton: "button",
   },
 );
 
 const { isHover, formattedAriaLabel, formattedTextValue, styleObj } =
   useCtaStyles(props);
-
-const onClick = (e: MouseEvent) => {
-  if (!props.disabled) return;
-  e.preventDefault();
-};
 </script>
 
 <template>
-  <NuxtLink
-    :to="link"
+  <button
+    :type="typeButton"
     class="customCta"
+    :disabled="disabled"
     :aria-label="formattedAriaLabel"
     :aria-disabled="disabled ? 'true' : undefined"
     :tabindex="disabled ? -1 : 0"
     :style="styleObj"
-    @click="onClick"
     @mouseenter="!disabled && (isHover = true)"
     @mouseleave="isHover = false"
     @focus="!disabled && (isHover = true)"
     @blur="isHover = false"
   >
     {{ formattedTextValue }}
-  </NuxtLink>
+  </button>
 </template>
 
 <style scoped>

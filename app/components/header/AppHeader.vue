@@ -76,7 +76,6 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
           iconHover="solar:user-bold-duotone"
           iconActive="solar:user-bold"
           label="profile"
-          link="/profile"
           preventClick
         />
 
@@ -86,7 +85,6 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
           iconHover="solar:cart-5-bold-duotone"
           iconActive="solar:cart-5-bold"
           label="cart"
-          link="/cart"
           preventClick
         />
       </div>

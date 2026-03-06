@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CustomCta from "../buttons/CustomCta.vue";
+import CustomButton from "../buttons/CustomButton.vue";
 import CustomIcon from "../buttons/CustomIcon.vue";
 import SideDrawer from "./SideDrawer.vue";
 
@@ -7,7 +7,7 @@ const cartOpen = ref(false);
 </script>
 
 <template>
-  <CustomCta
+  <CustomButton
     textValue="Add to cart"
     @click="cartOpen = true"
     backgroundColor="blue"
@@ -32,12 +32,11 @@ const cartOpen = ref(false);
     </template>
 
     <template #default>
-      <!-- anything -->
-      <p>Your cart content here</p>
+      <p>No products here yet!!!</p>
     </template>
 
     <template #footer>
-      <CustomCta
+      <CustomButton
         textValue="Checkout"
         backgroundColor="tomato"
         hoverBackgroundColor="darkred"

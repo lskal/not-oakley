@@ -21,12 +21,9 @@ const props = withDefaults(
     lockScroll?: boolean;
     zIndex?: number;
 
-    /**
-     * Accessibility/UX improvements
-     */
-    autofocusPanel?: boolean; // focus the panel on open
-    trapFocus?: boolean; // keep Tab inside the panel while open
-    restoreFocus?: boolean; // return focus to opener on close
+    autofocusPanel?: boolean;
+    trapFocus?: boolean;
+    restoreFocus?: boolean;
   }>(),
   {
     side: "right",
@@ -54,10 +51,9 @@ const isOpen = computed(() => props.modelValue);
 const close = () => emit("update:modelValue", false);
 const open = () => emit("update:modelValue", true);
 
-const rootRef = ref<HTMLElement | null>(null);
 const panelRef = ref<HTMLElement | null>(null);
 
-let lastActiveEl: Element | null = null;
+let lastActiveEl: HTMLElement | null = null;
 
 const lock = () => {
   document.documentElement.style.overflow = "hidden";
@@ -102,14 +98,12 @@ function getFocusable(container: HTMLElement) {
 const onKeydown = (e: KeyboardEvent) => {
   if (!isOpen.value) return;
 
-  // ESC closes
   if (props.closeOnEsc && e.key === "Escape") {
     e.preventDefault();
     close();
     return;
   }
 
-  // Focus trap
   if (!props.trapFocus) return;
   if (e.key !== "Tab") return;
 
@@ -117,18 +111,17 @@ const onKeydown = (e: KeyboardEvent) => {
   if (!panel) return;
 
   const focusable = getFocusable(panel);
+
   if (focusable.length === 0) {
-    // keep focus on panel itself
     e.preventDefault();
     panel.focus();
     return;
   }
 
-  const first = focusable[0]!;
-  const last = focusable[focusable.length - 1]!;
+  const first = focusable[0] ?? panel;
+  const last = focusable[focusable.length - 1] ?? panel;
   const active = document.activeElement as HTMLElement | null;
 
-  // If focus is outside the panel, pull it in
   if (active && !panel.contains(active)) {
     e.preventDefault();
     first.focus();
@@ -151,14 +144,15 @@ const onKeydown = (e: KeyboardEvent) => {
 async function handleOpen() {
   emit("open");
 
-  lastActiveEl = document.activeElement;
+  lastActiveEl = document.activeElement as HTMLElement | null;
 
   window.addEventListener("keydown", onKeydown);
+
   if (props.lockScroll) lock();
 
   if (props.autofocusPanel) {
     await nextTick();
-    // focus first focusable, else focus panel
+
     const panel = panelRef.value;
     if (!panel) return;
 
@@ -171,28 +165,24 @@ function handleClose() {
   emit("close");
 
   window.removeEventListener("keydown", onKeydown);
+
   if (props.lockScroll) unlock();
 
-  if (props.restoreFocus && lastActiveEl instanceof HTMLElement) {
-    // return focus to the element that opened the drawer
+  if (props.restoreFocus && lastActiveEl) {
     lastActiveEl.focus();
   }
+
   lastActiveEl = null;
 }
 
-watch(
-  isOpen,
-  (v) => {
-    if (v) handleOpen();
-    else handleClose();
-  },
-  { immediate: true },
-);
+watch(isOpen, (newValue) => {
+  if (newValue) handleOpen();
+  else handleClose();
+});
 
 onMounted(() => {
-  // Just in case we mount open=true
   if (isOpen.value) {
-    // already handled by watch(immediate), but harmless
+    handleOpen();
   }
 });
 
@@ -204,15 +194,12 @@ onBeforeUnmount(() => {
 
 <template>
   <Teleport to="body">
-    <!-- Keep root mounted; pointer-events handled via CSS -->
     <div
-      ref="rootRef"
       class="drawerRoot"
       :class="{ isOpen: isOpen }"
       :style="drawerStyle"
       :aria-hidden="!isOpen"
     >
-      <!-- Overlay -->
       <div v-show="overlay && isOpen" class="drawerOverlayWrap">
         <button
           class="drawerOverlay"
@@ -222,7 +209,6 @@ onBeforeUnmount(() => {
         />
       </div>
 
-      <!-- Panel (kept mounted; we animate via classes, not transition selectors) -->
       <aside
         ref="panelRef"
         class="drawerPanel"
@@ -255,12 +241,10 @@ onBeforeUnmount(() => {
   z-index: var(--z, 60);
   pointer-events: none;
 
-  /* only interactive when open */
   &.isOpen {
     pointer-events: auto;
   }
 
-  /* (optional) fade overlay when closed; overlay is v-show so this is mostly cosmetic */
   &:not(.isOpen) .drawerOverlay {
     opacity: 0;
   }
@@ -293,7 +277,6 @@ onBeforeUnmount(() => {
     flex-direction: column;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
 
-    /* animation lives here, not in Transition selectors */
     transition: transform 220ms ease;
     transform: translateX(0);
 
@@ -305,7 +288,6 @@ onBeforeUnmount(() => {
       left: 0;
     }
 
-    /* State classes = no spaghetti selectors */
     &.drawer--right.isClosed {
       transform: translateX(100%);
     }

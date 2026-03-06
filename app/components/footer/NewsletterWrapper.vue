@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CustomCta from "../buttons/CustomCta.vue";
+import CustomButton from "../buttons/CustomButton.vue";
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import CustomCta from "../buttons/CustomCta.vue";
     </p>
     <div class="inputEmailWrapper">
       <input class="inputEmail" type="email" placeholder="Enter your email" />
-      <CustomCta
+      <CustomButton
         textValue="Sign Up"
         :isUppercase="true"
         link="#"
