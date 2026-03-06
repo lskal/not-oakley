@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/vue";
+import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 import AppFooter from "../components/footer/AppFooter.vue";
 import AppHeader from "../components/header/AppHeader.vue";
 import SkipToMainContent from "../components/header/SkipToMainContent.vue";
