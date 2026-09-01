@@ -17,7 +17,12 @@ const heightFormatted = useFormatNumber(props.height, 1500);
 const widthFormatted = useFormatNumber(props.width, 1500);
 const topicFormatted = props.topic && `/${props.topic}`;
 
+const hasErrored = ref(false);
+
 const formattedSrc = computed(() => {
+  if (hasErrored.value) {
+    return `https://placehold.co/${widthFormatted.value}x${heightFormatted.value}?text=${encodeURIComponent(props.topic ?? "image")}`;
+  }
   /*  https://picsum.photos/800/600?random=1  */
   return `https://loremflickr.com/${widthFormatted.value}/${heightFormatted.value}${topicFormatted}`;
 });
@@ -27,5 +32,9 @@ const formattedAlt = computed(() =>
 </script>
 
 <template>
-  <NuxtImg :src="formattedSrc" :alt="formattedAlt" />
+  <NuxtImg
+    :src="formattedSrc"
+    :alt="formattedAlt"
+    @error="hasErrored = true"
+  />
 </template>

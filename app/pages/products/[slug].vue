@@ -5,7 +5,7 @@ import ProductImagesWrapper from "../../components/pdp/ProductImagesWrapper.vue"
 const route = useRoute();
 const slug = computed(() => String(route.params.slug));
 
-const { data: product } = await useFetch(() => `/api/products/${slug.value}`);
+const { data: product, error } = await useFetch(() => `/api/products/${slug.value}`);
 
 /* pass layout as fetch from db */
 const layouts = ["hero-square", "hero-16x9", "hero-4x5"] as const;
@@ -18,13 +18,14 @@ const layoutClass = randomLayout
 
 <template>
   <div class="container">
-    <div class="mainWrapper">
+    <div v-if="product" class="mainWrapper">
       <ProductImagesWrapper :product="product" :layoutClass="layoutClass" />
 
       <div class="productDetails">
         <ProductDetails :product="product" />
       </div>
     </div>
+    <p v-else-if="error">Prodotto non trovato.</p>
 
     <div class="other"></div>
   </div>

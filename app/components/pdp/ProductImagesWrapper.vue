@@ -5,6 +5,8 @@ const props = defineProps<{
   product: TProduct;
   layoutClass: string | undefined;
 }>();
+
+const encodedName = computed(() => encodeURIComponent(props.product.name));
 </script>
 
 <template>
@@ -16,25 +18,25 @@ const props = defineProps<{
     <!-- SECONDARY IMAGES -->
     <div class="productImage">
       <NuxtImg
-        :src="`https://placehold.co/900x600/981313/e5e5e5?text=${product.name.replace(/\s+/g, '+')}&font=AvenirNext`"
+        :src="`https://placehold.co/900x600/981313/e5e5e5?text=${encodedName}&font=AvenirNext`"
         :alt="`product image ${product.name}`"
       />
     </div>
     <div class="productImage">
       <NuxtImg
-        :src="`https://placehold.co/900x600/745527/ceb083?text=${product.name.replace(/\s+/g, '+')}&font=AvenirNext`"
+        :src="`https://placehold.co/900x600/745527/ceb083?text=${encodedName}&font=AvenirNext`"
         :alt="`product image ${product.name}`"
       />
     </div>
     <div class="productImage">
       <NuxtImg
-        :src="`https://placehold.co/900x600/69c2c9/1f1f24?text=${product.name.replace(/\s+/g, '+')}&font=AvenirNext`"
+        :src="`https://placehold.co/900x600/69c2c9/1f1f24?text=${encodedName}&font=AvenirNext`"
         :alt="`product image ${product.name}`"
       />
     </div>
     <div class="productImage">
       <NuxtImg
-        :src="`https://placehold.co/900x600/8ce55f/1f1f24?text=${product.name.replace(/\s+/g, '+')}&font=AvenirNext`"
+        :src="`https://placehold.co/900x600/8ce55f/1f1f24?text=${encodedName}&font=AvenirNext`"
         :alt="`product image ${product.name}`"
       />
     </div>

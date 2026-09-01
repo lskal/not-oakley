@@ -13,11 +13,11 @@ const prop = defineProps<{
 
     <div class="listing">
       <div v-for="product in products" :key="product.id" class="listingItem">
-        <NuxtImg
-          :src="product.heroImage"
-          :alt="`product image ${product.name}`"
-        />
         <NuxtLink :to="`/products/${product.slug}`">
+          <NuxtImg
+            :src="product.heroImage"
+            :alt="`product image ${product.name}`"
+          />
           <p>{{ product.name }}</p>
           <p>{{ useCurrency(product.minPrice) }}</p>
           <p v-if="product.specs?.hasPrescription">Prescription Available</p>
