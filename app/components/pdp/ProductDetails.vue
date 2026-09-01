@@ -18,7 +18,7 @@ const props = defineProps<{
   <div v-if="product.variants">
     <h3>Variants:</h3>
     <div v-for="variant in product.variants" :key="variant.id">
-      <p>{{ variant.name ?? "Variante" }}: {{ useCurrency(variant.price) }}</p>
+      <p>{{ variant.name ?? "Variant" }}: {{ useCurrency(variant.price) }}</p>
     </div>
   </div>
 
