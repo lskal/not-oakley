@@ -80,6 +80,12 @@ find the perfect icon by checking out the [iconify catalog page](https://icon-se
 
 ---
 
+## Node Version
+
+This project uses a `.nvmrc` file to pin the Node version. If you use nvm, run `nvm use` in the project root to switch to the correct version automatically.
+
+---
+
 ## Setup NPM/PNPM
 
 Make sure to install dependencies:
