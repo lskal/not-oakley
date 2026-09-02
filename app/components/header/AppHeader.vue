@@ -94,6 +94,7 @@ const { itemCount, openCart } = useCart();
             icon="solar:cart-5-broken"
             iconHover="solar:cart-5-bold-duotone"
             iconActive="solar:cart-5-bold"
+            activePath="/checkout"
             label="cart"
             @click="openCart"
           />

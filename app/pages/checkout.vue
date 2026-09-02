@@ -94,18 +94,19 @@ const placeOrder = () => {
 
         <ul class="summaryItems">
           <li v-for="item in items" :key="item.product.id">
-            <NuxtImg
-              class="summaryImage"
-              :src="item.product.heroImage"
-              :alt="`product image ${item.product.name}`"
-            />
-            <span class="summaryInfo">
-              <span class="summaryName">{{ item.product.name }}</span>
+            <span class="summaryName">{{ item.product.name }}</span>
+
+            <div class="summaryMeta">
+              <NuxtImg
+                class="summaryImage"
+                :src="item.product.heroImage"
+                :alt="`product image ${item.product.name}`"
+              />
               <span class="summaryQty">Qty {{ item.quantity }}</span>
-            </span>
-            <span class="summaryPrice">{{
-              useCurrency(item.product.minPrice * item.quantity)
-            }}</span>
+              <span class="summaryPrice">{{
+                useCurrency(item.product.minPrice * item.quantity)
+              }}</span>
+            </div>
           </li>
         </ul>
 
@@ -171,6 +172,7 @@ const placeOrder = () => {
 
 .checkoutForm {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
@@ -188,7 +190,7 @@ const placeOrder = () => {
   gap: var(--spacing);
 
   @media (min-width: 576px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 }
 
@@ -254,6 +256,17 @@ const placeOrder = () => {
 
   li {
     display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .summaryName {
+    width: 100%;
+    font-weight: bold;
+  }
+
+  .summaryMeta {
+    display: flex;
     align-items: center;
     gap: var(--spacing);
   }
@@ -266,14 +279,12 @@ const placeOrder = () => {
     flex-shrink: 0;
   }
 
-  .summaryInfo {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
   .summaryQty {
     color: var(--color-text-secondary);
+  }
+
+  .summaryPrice {
+    margin-left: auto;
   }
 }
 
