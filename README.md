@@ -95,7 +95,7 @@ find the perfect icon by checking out the [iconify catalog page](https://icon-se
 
 - i18n
 - sitemap
-- supabase --> for now there is no cart or account pages, if i decide in future to add this feature gonna have to include supabase with roles, admin and this stuff
+- supabase --> for now there are no account/auth pages (there is a cart now, see "Technical Choices"), if i decide in future to add accounts gonna have to include supabase with roles, admin and this stuff
 - pinia
 - tailwind
 - content
