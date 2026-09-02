@@ -27,7 +27,14 @@ const cartOpen = ref(false);
       >
         <strong>Cart</strong>
 
-        <CustomIcon icon="carbon:close" label="Close cart" @click="close" />
+        <CustomIcon
+          icon="solar:close-circle-broken"
+          iconHover="solar:close-circle-bold-duotone"
+          iconActive="solar:close-circle-bold"
+          heightIcon="24"
+          label="Close cart"
+          @click="close"
+        />
       </div>
     </template>
 
