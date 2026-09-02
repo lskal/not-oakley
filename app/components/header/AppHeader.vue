@@ -1,11 +1,15 @@
 <script setup>
 import CustomIcon from "../buttons/CustomIcon.vue";
 import SearchDrawer from "./SearchDrawer.vue";
+import CartDrawer from "./CartDrawer.vue";
 import { useIsActivePath } from "~/composables/useIsActivePath";
+import { useCart } from "~/composables/useCart";
 const { isActivePath } = useIsActivePath();
 const isDesktop = useBreakpoint({ minWidth: 1200 });
 
 const isSearchOpen = ref(false);
+
+const { itemCount, openCart } = useCart();
 </script>
 
 <template>
@@ -84,18 +88,22 @@ const isSearchOpen = ref(false);
           preventClick
         />
 
-        <CustomIcon
-          heightIcon="30"
-          icon="solar:cart-5-broken"
-          iconHover="solar:cart-5-bold-duotone"
-          iconActive="solar:cart-5-bold"
-          label="cart"
-          preventClick
-        />
+        <div class="cartIconWrapper">
+          <CustomIcon
+            heightIcon="30"
+            icon="solar:cart-5-broken"
+            iconHover="solar:cart-5-bold-duotone"
+            iconActive="solar:cart-5-bold"
+            label="cart"
+            @click="openCart"
+          />
+          <span v-if="itemCount > 0" class="cartBadge">{{ itemCount }}</span>
+        </div>
       </div>
     </div>
 
     <SearchDrawer v-model="isSearchOpen" />
+    <CartDrawer />
   </div>
 </template>
 
@@ -175,6 +183,32 @@ const isSearchOpen = ref(false);
     .right {
       align-items: center;
       justify-content: end;
+
+      .cartIconWrapper {
+        position: relative;
+        display: inline-flex;
+
+        .cartBadge {
+          position: absolute;
+          top: -4px;
+          right: -4px;
+
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 16px;
+          height: 16px;
+          padding: 0 4px;
+
+          font-size: 11px;
+          font-weight: bold;
+          line-height: 1;
+          color: var(--color-text-white);
+          background: var(--color-accent);
+          border-radius: 50%;
+          pointer-events: none;
+        }
+      }
     }
   }
 }
