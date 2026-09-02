@@ -14,6 +14,7 @@ const { items, removeItem, updateQuantity, subtotal, isOpen, openCart, closeCart
   <SideDrawer
     :modelValue="isOpen"
     side="right"
+    :autofocusPanel="false"
     @update:modelValue="(v) => (v ? openCart() : closeCart())"
   >
     <template #header="{ close }">
