@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
+import { computed, nextTick, ref, watch } from "vue";
 import CustomButton from "../buttons/CustomButton.vue";
 import CustomIcon from "../buttons/CustomIcon.vue";
 import SideDrawer from "../drawer/SideDrawer.vue";
@@ -19,6 +19,11 @@ const { data: products } = useFetch<TProduct[]>("/api/products", {
 });
 
 const query = ref("");
+const inputRef = ref<HTMLInputElement | null>(null);
+
+const focusInput = () => {
+  nextTick(() => inputRef.value?.focus());
+};
 
 const MAX_RESULTS = 6;
 
@@ -53,7 +58,9 @@ const showAllResults = (close: () => void) => {
   <SideDrawer
     :modelValue="modelValue"
     side="right"
+    :autofocusPanel="false"
     @update:modelValue="(v) => emit('update:modelValue', v)"
+    @open="focusInput"
   >
     <template #header="{ close }">
       <div class="searchDrawerHeader">
@@ -71,6 +78,7 @@ const showAllResults = (close: () => void) => {
 
     <template #default="{ close }">
       <input
+        ref="inputRef"
         v-model="query"
         type="search"
         class="searchDrawerInput"
