@@ -1,31 +1,36 @@
-# NUXT-TRAINING-ECOMMERCE-PROJECT
+# Nuxt Training Ecommerce Project
 
-### This is a training project to improve my skills in Nuxt 4 (current) and Vue 3 (current). Is not ment to be a rep off of the Oakley website, is just using is as a base to learn, please don't sue me ✌️
+### This is a training project to improve my skills in Nuxt 4 (current) and Vue 3 (current). Is not meant to be a rip off of the Oakley website, is just using it as a base to learn, please don't sue me ✌️
 
-## DEPLOY URL: 
+## What is this
+
+A small e-commerce front-end built to practice Nuxt 4 / Vue 3: category browsing, a product listing page, product detail pages, and a favourites page. Product data is served from `server/api` routes backed by Vercel Blob (`initialDB.json`), with a local JSON fallback for dev (`server/data/initialDB.fallback.json`).
+
+## Deploy URL
+
 [deploy link using vercel](https://nuxt-training-ecommerce-project.vercel.app/)
 
 ---
 
-## LINKS:
+## Links
 
 - [nuxt 4 structure](https://nuxt.com/docs/4.x/directory-structure)
 
-- [nuxt 4 exemples](http://nuxt.com/docs/4.x/examples)
+- [nuxt 4 examples](http://nuxt.com/docs/4.x/examples)
 
 - [nuxt 4 modules](https://nuxt.com/modules)
 
 ---
 
-## USEFULL CLI LINES:
+## Useful CLI Lines
 
-## delete and full install
+## Delete and full install
 
 `rm -rf node_modules .nuxt .output .nitro .data .cache dist logs`
 `npm i`
 `npm run dev`
 
-## vercel dev
+## Vercel dev
 
 ### You use vercel dev only when:
 
@@ -45,7 +50,7 @@ For production-like testing:
 
 ---
 
-## ICONIFY:
+## Iconify
 
 `import { Icon } from "@iconify/vue";`
 
@@ -61,25 +66,19 @@ find the perfect icon by checking out the [iconify catalog page](https://icon-se
 
 ---
 
-## POSSIBLE FUTURE INSTALL PACKEGES:
+## Possible Future Install Packages
 
 - i18n
 - sitemap
-- supabase --> for now there is no cart or account pages, if i decide in future to add this feature gonna have to inclire supabase with roles, admin and this staff
+- supabase --> for now there is no cart or account pages, if i decide in future to add this feature gonna have to include supabase with roles, admin and this stuff
 - pinia
 - tailwind
 - content
-- enlint / eslint-module
+- eslint / eslint-module
 
 ---
 
-## Nuxt Minimal Starter
-
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
----
-
-## SETUP NPM/PNPM:
+## Setup NPM/PNPM
 
 Make sure to install dependencies:
 
@@ -91,6 +90,8 @@ Make sure to install dependencies:
 
 Start the development server on `http://localhost:3000`:
 
+`npm run dev`
+
 ### Production
 
 Build the application for production:
@@ -99,7 +100,7 @@ Build the application for production:
 
 `npm run build`
 
-Updata values in vercel blob:
+Update values in vercel blob:
 
 ### npm run blob:upload
 
@@ -112,3 +113,9 @@ Locally preview production build:
 `npm run preview`
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+---
+
+## Environment Variables
+
+- `BLOB_READ_WRITE_TOKEN` — required to run `npm run blob:upload` and to fetch product data from Vercel Blob in production. Without it locally, the app falls back to the local JSON fallback file for dev.
