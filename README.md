@@ -62,6 +62,8 @@ find the perfect icon by checking out the [iconify catalog page](https://icon-se
 
 ## SCSS
 
+`app/assets/css/main.scss` manages the general styling: base/reset rules and the `:root` design tokens (colors, spacing, typography, etc.) used across components.
+
 [nuxt 4 scss docs](https://nuxt.com/docs/4.x/getting-started/styling#using-preprocessors)
 
 ---
