@@ -4,7 +4,30 @@
 
 ## What is this
 
-A small e-commerce front-end built to practice Nuxt 4 / Vue 3: category browsing, a product listing page, product detail pages, and a favourites page. Product data is served from `server/api` routes backed by Vercel Blob (`initialDB.json`), with a local JSON fallback for dev (`server/data/initialDB.fallback.json`).
+A small e-commerce front-end built to practice Nuxt 4 / Vue 3: category browsing, a product listing page, product detail pages, a favourites page, product search, and a mock checkout backed by a real (if lightweight) cart. Product data is served from `server/api` routes backed by Vercel Blob (`initialDB.json`), with a local JSON fallback for dev (`server/data/initialDB.fallback.json`).
+
+---
+
+## Pages
+
+- `/` — homepage
+- `/category/[category]` — product listing page (PLP) for a category (sunglasses, prescription, apparel, ...)
+- `/products/[slug]` — product detail page (PDP), with an "Add to cart" that opens the cart drawer
+- `/favourites` — wishlist page
+- `/search` — full search results page, reached via the search drawer's "Show all results"
+- `/checkout` — mock checkout: reads the current cart, shows a static shipping/payment form, "Place order" clears the cart and shows a mock confirmation (no real order processing)
+
+There are also two header-level drawers (not routes): a search drawer with live autosuggest, and a cart drawer showing the current cart's items/quantities/subtotal — both follow the same `SideDrawer` component pattern.
+
+---
+
+## Technical Choices
+
+- **Routing**: plain Nuxt file-based routing (`app/pages/`) — no router config needed; dynamic segments like `[category]` and `[slug]` map straight to route params. Chosen because it's Nuxt's default and keeps the project focused on learning Nuxt/Vue itself rather than routing setup.
+- **Data**: `server/api/*` Nitro routes (colocated backend, no separate server needed) paired with `useFetch`/`useAsyncData` for SSR-friendly fetching.
+- **Cart / shared state**: a small `useCart()` composable (`app/composables/useCart.ts`) wrapping Nuxt's built-in `useState()`, instead of Pinia. `useState()` gives the same shared, SSR-safe reactive state across components (cart items, cart-drawer open state) without adding a dependency — enough for this app's needs. If the app's state grows beyond a cart (e.g. auth, multi-step checkout), Pinia is still the natural next step (see "Possible Future Install Packages" below).
+
+---
 
 ## Deploy URL
 
