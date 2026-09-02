@@ -1,8 +1,11 @@
 <script setup>
 import CustomIcon from "../buttons/CustomIcon.vue";
+import SearchDrawer from "./SearchDrawer.vue";
 import { useIsActivePath } from "~/composables/useIsActivePath";
 const { isActivePath } = useIsActivePath();
 const isDesktop = useBreakpoint({ minWidth: 1200 });
+
+const isSearchOpen = ref(false);
 </script>
 
 <template>
@@ -68,6 +71,7 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
           iconHover="solar:map-point-search-bold-duotone"
           iconActive="solar:map-point-search-bold"
           label="search"
+          @click="isSearchOpen = true"
         />
 
         <CustomIcon
@@ -89,6 +93,8 @@ const isDesktop = useBreakpoint({ minWidth: 1200 });
         />
       </div>
     </div>
+
+    <SearchDrawer v-model="isSearchOpen" />
   </div>
 </template>
 

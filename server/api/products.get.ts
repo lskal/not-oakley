@@ -6,13 +6,23 @@ export default defineEventHandler(async (event) => {
   const db = await readInitialDb();
   let products = Array.isArray(db?.products) ? db.products : [];
 
-  const { category, random } = getQuery(event);
+  const { category, search, random } = getQuery(event);
 
   //  category filter
   if (category) {
     const wanted = String(category).toLowerCase();
     products = products.filter(
       (product: TProduct) => String(product.category).toLowerCase() === wanted,
+    );
+  }
+
+  // search filter (matches on name or category)
+  if (search) {
+    const wanted = String(search).trim().toLowerCase();
+    products = products.filter(
+      (product: TProduct) =>
+        product.name.toLowerCase().includes(wanted) ||
+        String(product.category).toLowerCase().includes(wanted),
     );
   }
 
