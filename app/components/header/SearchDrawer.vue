@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
+import { Icon } from "@iconify/vue";
 import CustomButton from "../buttons/CustomButton.vue";
 import CustomIcon from "../buttons/CustomIcon.vue";
 import SideDrawer from "../drawer/SideDrawer.vue";
@@ -21,11 +22,12 @@ const { data: products } = useFetch<TProduct[]>("/api/products", {
 const query = ref("");
 const inputRef = ref<HTMLInputElement | null>(null);
 
-const focusInput = () => {
-  nextTick(() => inputRef.value?.focus());
+const clearQuery = () => {
+  query.value = "";
+  inputRef.value?.focus();
 };
 
-const MAX_RESULTS = 6;
+const MAX_RESULTS = 5;
 
 const filteredProducts = computed(() => {
   const wanted = query.value.trim().toLowerCase();
@@ -58,9 +60,8 @@ const showAllResults = (close: () => void) => {
   <SideDrawer
     :modelValue="modelValue"
     side="right"
-    :autofocusPanel="false"
+    :initialFocusRef="inputRef"
     @update:modelValue="(v) => emit('update:modelValue', v)"
-    @open="focusInput"
   >
     <template #header="{ close }">
       <div class="searchDrawerHeader">
@@ -77,14 +78,26 @@ const showAllResults = (close: () => void) => {
     </template>
 
     <template #default="{ close }">
-      <input
-        ref="inputRef"
-        v-model="query"
-        type="search"
-        class="searchDrawerInput"
-        placeholder="Search products..."
-        aria-label="Search products"
-      />
+      <div class="searchDrawerInputWrapper">
+        <input
+          ref="inputRef"
+          v-model="query"
+          type="search"
+          class="searchDrawerInput"
+          placeholder="Search products..."
+          aria-label="Search products"
+        />
+
+        <button
+          v-if="query"
+          type="button"
+          class="searchDrawerClearBtn"
+          aria-label="Clear search"
+          @click="clearQuery"
+        >
+          <Icon icon="carbon:close" height="14" />
+        </button>
+      </div>
 
       <p v-if="!query.trim()" class="searchDrawerHint">
         Start typing to search.
@@ -132,9 +145,13 @@ const showAllResults = (close: () => void) => {
   width: 100%;
 }
 
+.searchDrawerInputWrapper {
+  position: relative;
+}
+
 .searchDrawerInput {
   width: 100%;
-  padding: 10px 12px;
+  padding: 10px 36px 10px 12px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   font: inherit;
@@ -145,6 +162,27 @@ const showAllResults = (close: () => void) => {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
+
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+}
+
+.searchDrawerClearBtn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  padding: 2px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
 }
 
 .searchDrawerHint {

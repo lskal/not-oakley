@@ -11,6 +11,7 @@ const props = defineProps<{
   // optional
   iconHover?: string;
   iconActive?: string;
+  activePath?: string;
   preventClick?: boolean;
   heightIcon?: TNumberLike;
   label?: string;
@@ -29,9 +30,10 @@ const { isActivePath } = useIsActivePath();
 
 const hasLink = computed(() => Boolean(props.link));
 
-const isRouteActive = computed(() =>
-  props.link ? isActivePath(props.link) : false,
-);
+const isRouteActive = computed(() => {
+  const path = props.activePath ?? props.link;
+  return path ? isActivePath(path) : false;
+});
 const isHover = ref(false);
 
 const currentIcon = computed(() => {

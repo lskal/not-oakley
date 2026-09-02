@@ -70,6 +70,7 @@ const isSearchOpen = ref(false);
           icon="solar:map-point-search-broken"
           iconHover="solar:map-point-search-bold-duotone"
           iconActive="solar:map-point-search-bold"
+          activePath="/search"
           label="search"
           @click="isSearchOpen = true"
         />

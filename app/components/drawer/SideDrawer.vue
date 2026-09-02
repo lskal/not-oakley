@@ -24,6 +24,7 @@ const props = withDefaults(
     autofocusPanel?: boolean;
     trapFocus?: boolean;
     restoreFocus?: boolean;
+    initialFocusRef?: HTMLElement | null;
   }>(),
   {
     side: "right",
@@ -37,6 +38,7 @@ const props = withDefaults(
     autofocusPanel: true,
     trapFocus: true,
     restoreFocus: true,
+    initialFocusRef: null,
   },
 );
 
@@ -152,6 +154,11 @@ async function handleOpen() {
 
   if (props.autofocusPanel) {
     await nextTick();
+
+    if (props.initialFocusRef) {
+      props.initialFocusRef.focus();
+      return;
+    }
 
     const panel = panelRef.value;
     if (!panel) return;
