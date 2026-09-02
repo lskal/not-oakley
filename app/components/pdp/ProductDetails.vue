@@ -22,5 +22,5 @@ const props = defineProps<{
     </div>
   </div>
 
-  <AddToCartButton />
+  <AddToCartButton :product="product" />
 </template>

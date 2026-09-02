@@ -1,54 +1,27 @@
 <script setup lang="ts">
 import CustomButton from "../buttons/CustomButton.vue";
-import CustomIcon from "../buttons/CustomIcon.vue";
-import SideDrawer from "./SideDrawer.vue";
+import { useCart } from "../../composables/useCart";
+import type { TProduct } from "../../../types/cms";
 
-const cartOpen = ref(false);
+const props = defineProps<{
+  product: TProduct;
+}>();
+
+const { addItem, openCart } = useCart();
+
+const handleAddToCart = () => {
+  addItem(props.product);
+  openCart();
+};
 </script>
 
 <template>
   <CustomButton
     textValue="Add to cart"
-    @click="cartOpen = true"
+    @click="handleAddToCart"
     backgroundColor="blue"
     hoverBackgroundColor="darkblue"
     padding="10px"
     style="width: 100%"
   />
-
-  <SideDrawer v-model="cartOpen" side="right">
-    <template #header="{ close }">
-      <div
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        "
-      >
-        <strong>Cart</strong>
-
-        <CustomIcon
-          icon="solar:close-circle-broken"
-          iconHover="solar:close-circle-bold-duotone"
-          iconActive="solar:close-circle-bold"
-          heightIcon="24"
-          label="Close cart"
-          @click="close"
-        />
-      </div>
-    </template>
-
-    <template #default>
-      <p>No products here yet!!!</p>
-    </template>
-
-    <template #footer>
-      <CustomButton
-        textValue="Checkout"
-        backgroundColor="tomato"
-        hoverBackgroundColor="darkred"
-        isUppercase
-      />
-    </template>
-  </SideDrawer>
 </template>
