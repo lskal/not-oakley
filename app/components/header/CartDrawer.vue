@@ -79,7 +79,7 @@ const { items, removeItem, updateQuantity, subtotal, isOpen, openCart, closeCart
       </ul>
     </template>
 
-    <template v-if="items.length > 0" #footer>
+    <template v-if="items.length > 0" #footer="{ close }">
       <div class="cartDrawerTotal">
         <span>Subtotal</span>
         <span>{{ useCurrency(subtotal) }}</span>
@@ -91,6 +91,12 @@ const { items, removeItem, updateQuantity, subtotal, isOpen, openCart, closeCart
         hoverBackgroundColor="darkred"
         isUppercase
         style="width: 100%"
+        @click="
+          () => {
+            close();
+            navigateTo('/checkout');
+          }
+        "
       />
     </template>
   </SideDrawer>
